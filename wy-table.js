@@ -193,7 +193,7 @@ function initTable() {
   tbody.appendChild(frag);
   table.appendChild(tbody);
 
-  filterRows('highlight');
+  filterRows('all');
   applyButtonStyles();
 
   tabsEl.onclick = function(e) {
