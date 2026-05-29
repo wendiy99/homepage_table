@@ -208,7 +208,6 @@ function initTable() {
     btn.style.cssText = ON;
     filterRows(btn.dataset.f);
   };
-}
   tbody.appendChild(frag);
 
   filterRows('highlight');
