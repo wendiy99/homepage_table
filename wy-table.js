@@ -165,13 +165,17 @@ function filterRows(f) {
 }
 
 function initTable() {
-  var tbody  = document.getElementById('wy-body');
+  var table  = document.querySelector('.wy-table');
   var tabsEl = document.getElementById('wy-tabs');
-  if (!tbody || !tabsEl) {
+  if (!table || !tabsEl) {
     document.addEventListener('DOMContentLoaded', initTable, { once: true });
     return;
   }
-  if (tbody.children.length > 0) { applyButtonStyles(); return; }
+
+  var old = table.querySelector('tbody');
+  if (old) old.remove();
+
+  var tbody = document.createElement('tbody');
 
   var frag = document.createDocumentFragment();
   D.forEach(function(r) {
@@ -187,6 +191,24 @@ function initTable() {
       '<td class="wy-type"><span class="navigation">' + r[2] + '</span></td>';
     frag.appendChild(tr);
   });
+  tbody.appendChild(frag);
+  table.appendChild(tbody);
+
+  filterRows('highlight');
+  applyButtonStyles();
+
+  tabsEl.onclick = function(e) {
+    var btn = e.target.closest('.wy-tab');
+    if (!btn) return;
+    document.querySelectorAll('.wy-tab').forEach(function(t) {
+      t.classList.remove('active');
+      t.style.cssText = OFF;
+    });
+    btn.classList.add('active');
+    btn.style.cssText = ON;
+    filterRows(btn.dataset.f);
+  };
+}
   tbody.appendChild(frag);
 
   filterRows('highlight');
