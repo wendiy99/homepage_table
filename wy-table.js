@@ -176,7 +176,6 @@ function initTable() {
   if (old) old.remove();
 
   var tbody = document.createElement('tbody');
-
   var frag = document.createDocumentFragment();
   D.forEach(function(r) {
     var tr = document.createElement('tr');
@@ -193,22 +192,6 @@ function initTable() {
   });
   tbody.appendChild(frag);
   table.appendChild(tbody);
-
-  filterRows('highlight');
-  applyButtonStyles();
-
-  tabsEl.onclick = function(e) {
-    var btn = e.target.closest('.wy-tab');
-    if (!btn) return;
-    document.querySelectorAll('.wy-tab').forEach(function(t) {
-      t.classList.remove('active');
-      t.style.cssText = OFF;
-    });
-    btn.classList.add('active');
-    btn.style.cssText = ON;
-    filterRows(btn.dataset.f);
-  };
-  tbody.appendChild(frag);
 
   filterRows('highlight');
   applyButtonStyles();
