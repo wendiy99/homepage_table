@@ -1,7 +1,7 @@
 (function(){
 
 var HIGHLIGHTS = [
-  "26.6.12|New York","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
+  "26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
   "26.3.16","26.3.21|Singapore","26.3|New York","26.2.28",
   "26.1.20|Singapore","26.1.9|Shanghai","25.12–26.1|New York","25.11|Buenos Aires",
   "25.10","25.10–11|France","25.10.28","25.10.3–26.2.1|Warsaw",
