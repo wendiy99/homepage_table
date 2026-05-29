@@ -69,7 +69,7 @@ var D = [
   ["25.8.1|Idyllwild CA",      '"Visions of Phosphine Earth", FWB Fest, with Berggruen Institute', "EXHIBITION", ["exhibition"]],
   ["25.8|New York",            '<a href="https://www.newinc.org/members"><b>NEW INC</b>, Y12 Extended Realities Track</a>', "RESIDENCY", ["residency"]],
   ["25.7.24|Beijing",          '<b>VH AWARD Salon</b>, Speculative Worldbuilding with AI, conversation with Robin Mallick, Beichen Yang and Ziyang Wu, Hyundai Motorstudio', "TALK", ["talk"]],
-["25.7.16", '<a href="https://mp.weixin.qq.com/s/sDBtWj2yWVAmLdLee4FpOA"><b>艺术商业</b>, "《胡桃宫梦志》：当我们在思考&#x2018;假如&#x2019;的时候，我们究竟在思考什么？"</a>', "INTERVIEW", ["interview"]],
+  ["25.7.16", '<a href="https://mp.weixin.qq.com/s/sDBtWj2yWVAmLdLee4FpOA"><b>艺术商业</b>, "《胡桃宫梦志》：当我们在思考&#x2018;假如&#x2019;的时候，我们究竟在思考什么？"</a>', "INTERVIEW", ["interview"]],
   ["25.7.12",                  '<a href="https://www.sursuma.com/magazine/wendi-yan"><b>Sursuma Magazine</b>, "Wendi Yan"</a>', "INTERVIEW", ["interview"]],
   ["25.7.11",                  '<a href="https://mp.weixin.qq.com/s/x0GajegDsM7AY68qLqvJMA"><b>新周刊</b>, "这些创作者，并不惧怕AI的到来"</a>', "INTERVIEW", ["interview"]],
   ["25.7.9",                   '<a href="https://futurerelics.berggruen.org/daoist-alchemy"><b>Berggruen Institute</b>, "Daoist Diagram for Carbon Alchemy", in <i>Future Wunderkammer</i>, ed. Claire Webb</a>', "COMMISSION<br>WRITING ✦", ["exhibition","publication"]],
