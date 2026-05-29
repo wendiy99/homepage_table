@@ -25,6 +25,7 @@ var D = [
   ["26.6.12|New York",         '<a href="https://www.biodesignchallenge.org/summit-2026"><b>Biodesign Summit</b>, MoMA</a>', "TALK", ["talk"]],
   ["26.6.5|Melbourne",         '<a href="https://ncm.org.au/exhibitions/stigmergy#6"><b>NCM Melbourne</b>, "Stigmergy"</a>', "EXHIBITION", ["exhibition"]],
   ["26.6.4|New York",          '<a href="https://www.onx.studio/onx-programming/onxscreens"><b>Onassis Foundation</b>, ONX Screens</a>', "EXHIBITION", ["exhibition"]],
+  ["26.5.26",                  '<a href="https://www.artandmarket.net/conversation/2026/05/22/conversation-with-wendi-yan-h7z2r"><b>Art & Market</b>, "Conversation with Wendi Yan"</a>', "INTERVIEW", ["interview"]],
   ["26.5.12|Berlin",           '<a href="https://diffrakt.space/events/trees-and-termites-ghosts-and-goddesses/"><b>diffrakt</b>, "Trees and Termites, Ghosts and Goddesses", Screening</a>', "EXHIBITION", ["exhibition"]],
   ["26.5.8|Venice",            '<a href="https://www.cyfest.art/cyfest-17-venice"><b>CYFEST 17</b>, International Media Art Festival</a>', "EXHIBITION", ["exhibition"]],
   ["26.4.28|Geneva",           '<a href="https://arts.cern/arts-at-cern-and-nobel-prize-museum-announce-the-collide-stockholm-international-residency-award-recipient-and-honorary-mentions/"><b>CERN Collide Stockholm</b>, Honorary Mention</a>', "RESIDENCY", ["residency"]],
