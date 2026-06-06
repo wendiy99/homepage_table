@@ -22,6 +22,7 @@ var HIGHLIGHTS = [
 // To highlight a row: add its "YY.M.D|City" string to HIGHLIGHTS above
 
 var D = [
+  ["26.6.18|New York",          '<b>Office of Applied Strategy</b>, panel, "TALK", ["talk"]],
   ["26.6.12|New York",         '<a href="https://www.biodesignchallenge.org/summit-2026"><b>Biodesign Summit</b>, MoMA</a>', "TALK", ["talk"]],
   ["26.6.5|Melbourne",         '<a href="https://ncm.org.au/exhibitions/stigmergy#6"><b>NCM Melbourne</b>, "Stigmergy"</a>', "EXHIBITION", ["exhibition"]],
   ["26.6.4|New York",          '<a href="https://www.onx.studio/onx-programming/onxscreens"><b>Onassis Foundation</b>, ONX Screens</a>', "EXHIBITION", ["exhibition"]],
