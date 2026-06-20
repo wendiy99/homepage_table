@@ -145,10 +145,22 @@ var ON   = BASE + 'background:#111!important;border:1px solid #111!important;col
 
 function applyButtonStyles() {
   document.querySelectorAll('.wy-tab').forEach(function(btn) {
-    btn.style.cssText = btn.classList.contains('active') ? ON : OFF;
-    btn.onmouseenter = function() { this.style.cssText = ON; };
+    var isInit = btn.dataset.f === 'initiatives';
+    var radius = isInit ? 'border-radius:0px!important;' : 'border-radius:2rem!important;';
+    var activeStyle = ON.replace('border-radius:2rem!important;', radius);
+    var inactiveStyle = OFF.replace('border-radius:2rem!important;', radius);
+
+    // Custom hover style for Initiatives (hollow black outline) vs solid black for others
+    var hoverStyle = isInit
+      ? BASE.replace('border-radius:2rem!important;', radius) + 'background:transparent!important;border:1px solid #111!important;color:#111!important;'
+      : activeStyle;
+
+    btn.style.cssText = btn.classList.contains('active') ? activeStyle : inactiveStyle;
+    btn.onmouseenter = function() {
+      this.style.cssText = this.classList.contains('active') ? activeStyle : hoverStyle;
+    };
     btn.onmouseleave = function() {
-      this.style.cssText = this.classList.contains('active') ? ON : OFF;
+      this.style.cssText = this.classList.contains('active') ? activeStyle : inactiveStyle;
     };
   });
 }
@@ -175,6 +187,15 @@ function initTable() {
   if (!table || !tabsEl) {
     document.addEventListener('DOMContentLoaded', initTable, { once: true });
     return;
+  }
+
+  // Inject Initiatives tab button dynamically if not present in the HTML
+  if (!tabsEl.querySelector('[data-f="initiatives"]')) {
+    var initBtn = document.createElement('button');
+    initBtn.className = 'wy-tab';
+    initBtn.dataset.f = 'initiatives';
+    initBtn.textContent = 'Initiatives';
+    tabsEl.appendChild(initBtn);
   }
 
   var old = table.querySelector('tbody');
