@@ -1,8 +1,8 @@
 (function(){
 
 var HIGHLIGHTS = [
-  "26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
-  "26.3.16","26.3.21|Singapore","26.3|New York","26.2.28",
+  "26.6.23","26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
+  "26.3.16","26.3.21|Singapore","26.3|New York","26.2.28","26.2.19",
   "26.1.20|Singapore","26.1.9|Shanghai","25.12–26.1|New York","25.11|Buenos Aires",
   "25.10","25.10–11|France","25.10.28","25.10.3–26.2.1|Warsaw",
   "25.9.12–26.1.4|Germany","25.8|New York","25.8.6","25.7.24|Beijing",
@@ -16,15 +16,16 @@ var HIGHLIGHTS = [
 
 // ─── ADD NEW ROWS AT THE TOP ───────────────────────────────────────────────
 // Format: ["YY.M.D|City", '<description HTML>', "TYPE", ["category"]]
-// Categories: "exhibition" "talk" "publication" "interview" "press" "residency"
+// Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 // Multiple categories: ["exhibition","talk"]
 // ✦ marker: append to type string, e.g. "EXHIBITION ✦"
 // To highlight a row: add its "YY.M.D|City" string to HIGHLIGHTS above
 
 var D = [
+  ["26.6.23",                  '<a href="https://therevivalfund.com/"><b>The Revival Fund</b></a>, Grantee Announcement', "INITIATIVE", ["initiatives"]],
   ["26.6.18|New York",         '<b>Office of Applied Strategy</b>, Practical Aesthetic Service, Panel with Sarah Hromack-Chan, Justin Morris-Marano, and Xandra Beverlin', "TALK", ["talk"]],
   ["26.6.12|New York",         '<a href="https://www.biodesignchallenge.org/summit-2026"><b>Biodesign Summit</b>, MoMA</a>', "TALK", ["talk"]],
-  ["26.6.11|New York",         '<a href="https://www.instagram.com/p/DZc6QOolagR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><b>Hyundai Artlab</b>, June Editor Pick</a>', "PUBLICATION", ["publication"]],
+  ["26.6.11|New York",         '<a href="https://www.instagram.com/p/DZc6QOolagR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><b>Hyundai Artlab</b>, Guest Editor, June Editor Pick</a>', "PUBLICATION", ["publication", "initiatives"]],
   ["26.6.5|Melbourne",         '<a href="https://ncm.org.au/exhibitions/stigmergy#6"><b>NCM Melbourne</b>, "Stigmergy"</a>', "EXHIBITION", ["exhibition"]],
   ["26.6.4|New York",          '<a href="https://www.onx.studio/onx-programming/onxscreens"><b>Onassis Foundation</b>, ONX Screens</a>', "EXHIBITION", ["exhibition"]],
   ["26.5.26",                  '<a href="https://www.artandmarket.net/conversation/2026/05/22/conversation-with-wendi-yan-h7z2r"><b>Art & Market</b>, "Conversation with Wendi Yan"</a>', "INTERVIEW", ["interview"]],
@@ -44,6 +45,7 @@ var D = [
   ["26.3|New York",            '<b>Google</b>, Flow Session Artist', "RESIDENCY", ["residency"]],
   ["26.2.28",                  '<a href="https://titles.substack.com/p/do-ais-long-for-a-self-generating"><b>TITLES</b>, "Do AIs Long for a Self-Generating World?"</a>', "PUBLICATION", ["publication"]],
   ["26.2.28|Los Angeles",      '"Code Name: Doll House"', "EXHIBITION", ["exhibition"]],
+  ["26.2.19",                  '<a href="https://therevivalfund.com/"><b>The Revival Fund</b></a>, Open Call Launches', "INITIATIVE", ["initiatives"]],
   ["26.2.7|online",            '<b>Future Finds</b>, "Beyond a thermodynamic energy future", conversation with Kelsey Chen', "TALK", ["talk"]],
   ["26.2.5",                   '<a href="https://interactfellowship.substack.com/p/in-conversation-with-wendi-yan"><b>Interact Fellowship</b>, Interview</a>', "INTERVIEW", ["interview"]],
   ["26.1.20|Singapore",        '<b>Artspace @ Helutrans Gallery 1</b>, "The 6th VH Award", Singapore Art Week', "EXHIBITION", ["exhibition"]],
@@ -162,6 +164,7 @@ function filterRows(f) {
     else if (f === 'publication') show = c.indexOf('publication') > -1;
     else if (f === 'editorial')   show = c.indexOf('interview') > -1 || c.indexOf('press') > -1;
     else if (f === 'residency')   show = c.indexOf('residency') > -1;
+    else if (f === 'initiatives') show = c.indexOf('initiatives') > -1;
     tr.classList.toggle('hidden', !show);
   });
 }
