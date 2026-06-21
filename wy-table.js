@@ -14,13 +14,8 @@ var HIGHLIGHTS = [
   "23.7","23.5|Princeton NJ","22.7–8|New York","22.6|Svalbard"
 ];
 
-// ─── ADD NEW ROWS AT THE TOP ───────────────────────────────────────────────
 // Format: ["YY.M.D|City", '<description HTML>', "TYPE", ["category"]]
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
-// Multiple categories: ["exhibition","talk"]
-// ✦ marker: append to type string, e.g. "EXHIBITION ✦"
-// To highlight a row: add its "YY.M.D|City" string to HIGHLIGHTS above
-
 var D = [
   ["26.6.23",                  '<a href="https://therevivalfund.com/"><b>The Revival Fund</b></a>, Announcing our first cycle of grantee projects', "INITIATIVE", ["initiatives"]],
   ["26.6.18|New York",         '<b>Office of Applied Strategy</b>, Practical Aesthetic Service, Panel with Sarah Hromack-Chan, Justin Morris-Marano, and Xandra Beverlin', "TALK", ["talk"]],
@@ -74,7 +69,7 @@ var D = [
   ["25.8.1|Idyllwild CA",      '"Visions of Phosphine Earth", FWB Fest, with Berggruen Institute', "EXHIBITION", ["exhibition"]],
   ["25.8|New York",            '<a href="https://www.newinc.org/members"><b>NEW INC</b>, Y12 Extended Realities Track</a>', "RESIDENCY", ["residency"]],
   ["25.7.24|Beijing",          '<b>VH AWARD Salon</b>, Speculative Worldbuilding with AI, conversation with Robin Mallick, Beichen Yang and Ziyang Wu, Hyundai Motorstudio', "TALK", ["talk"]],
-  ["25.7.16", '<a href="https://mp.weixin.qq.com/s/sDBtWj2yWVAmLdLee4FpOA"><b>艺术商业</b>, "《胡桃宫梦志》：当我们在思考&#x2018;假如&#x2019;的时候，我们究竟在思考什么？"</a>', "INTERVIEW", ["interview"]],
+  ["25.7.16",                  '<a href="https://mp.weixin.qq.com/s/sDBtWj2yWVAmLdLee4FpOA"><b>艺术商业</b>, "《胡桃宫梦志》：当我们在思考&#x2018;假如&#x2019;的时候，我们究竟在思考什么？"</a>', "INTERVIEW", ["interview"]],
   ["25.7.12",                  '<a href="https://www.sursuma.com/magazine/wendi-yan"><b>Sursuma Magazine</b>, "Wendi Yan"</a>', "INTERVIEW", ["interview"]],
   ["25.7.11",                  '<a href="https://mp.weixin.qq.com/s/x0GajegDsM7AY68qLqvJMA"><b>新周刊</b>, "这些创作者，并不惧怕AI的到来"</a>', "INTERVIEW", ["interview"]],
   ["25.7.9",                   '<a href="https://futurerelics.berggruen.org/daoist-alchemy"><b>Berggruen Institute</b>, "Daoist Diagram for Carbon Alchemy", in <i>Future Wunderkammer</i>, ed. Claire Webb</a>', "COMMISSION<br>WRITING ✦", ["exhibition","publication"]],
@@ -137,34 +132,6 @@ var D = [
   ["21|virtual",               '<b>EyeJack Gallery</b>, "Prosthetic Reality V.2"', "EXHIBITION", ["exhibition"]]
 ];
 
-// ──────────────────────────────────────────────────────────────────────────
-
-var BASE = 'font-size:0.75em!important;font-family:inherit!important;letter-spacing:0.09em!important;text-transform:uppercase!important;font-weight:400!important;border-radius:2rem!important;padding:5px 12px!important;margin:0!important;cursor:pointer!important;line-height:1!important;box-shadow:none!important;';
-var OFF  = BASE + 'background:transparent!important;border:1px solid #ddd!important;color:#aaa!important;';
-var ON   = BASE + 'background:#111!important;border:1px solid #111!important;color:#f5f5f5!important;';
-
-function applyButtonStyles() {
-  document.querySelectorAll('.wy-tab').forEach(function(btn) {
-    var isInit = btn.dataset.f === 'initiatives';
-    var radius = isInit ? 'border-radius:0px!important;' : 'border-radius:2rem!important;';
-    var activeStyle = ON.replace('border-radius:2rem!important;', radius);
-    var inactiveStyle = OFF.replace('border-radius:2rem!important;', radius);
-
-    // Custom hover style for Initiatives (hollow black outline) vs solid black for others
-    var hoverStyle = isInit
-      ? BASE.replace('border-radius:2rem!important;', radius) + 'background:transparent!important;border:1px solid #111!important;color:#111!important;'
-      : activeStyle;
-
-    btn.style.cssText = btn.classList.contains('active') ? activeStyle : inactiveStyle;
-    btn.onmouseenter = function() {
-      this.style.cssText = this.classList.contains('active') ? activeStyle : hoverStyle;
-    };
-    btn.onmouseleave = function() {
-      this.style.cssText = this.classList.contains('active') ? activeStyle : inactiveStyle;
-    };
-  });
-}
-
 function filterRows(f) {
   document.querySelectorAll('.wy-table tr').forEach(function(tr) {
     var c = tr.dataset.cats || '';
@@ -189,7 +156,6 @@ function initTable() {
     return;
   }
 
-  // Inject Initiatives tab button dynamically if not present in the HTML
   if (!tabsEl.querySelector('[data-f="initiatives"]')) {
     var initBtn = document.createElement('button');
     initBtn.className = 'wy-tab';
@@ -198,39 +164,55 @@ function initTable() {
     tabsEl.appendChild(initBtn);
   }
 
+  document.querySelectorAll('.wy-tab').forEach(function(btn) {
+    btn.removeAttribute('style');
+  });
+
   var old = table.querySelector('tbody');
   if (old) old.remove();
 
   var tbody = document.createElement('tbody');
   var frag = document.createDocumentFragment();
+  
   D.forEach(function(r) {
     var tr = document.createElement('tr');
     tr.dataset.cats = r[3].join(',');
     tr.dataset.hi   = HIGHLIGHTS.indexOf(r[0]) > -1 ? '1' : '0';
+    
+    if (r[1].indexOf('Grand Prix') > -1) {
+      tr.classList.add('wy-grand-prix');
+    }
+    
     var dp = r[0].split('|');
+    var dateHtml = dp[0] + (dp[1] ? '<br><span style="color:#bbb">' + dp[1] + '</span>' : '');
+    
+    var typeText = r[2];
+    if (typeText.indexOf('✦') > -1) {
+      typeText = typeText.replace(/✦/g, '<span class="wy-solo-marker">✦</span>');
+    }
+
     tr.innerHTML =
-      '<td class="wy-date"><span class="navigation">' + dp[0] +
-        (dp[1] ? '<br><span style="color:#bbb">' + dp[1] + '</span>' : '') +
-      '</span></td>' +
+      '<td class="wy-date"><span class="navigation">' + dateHtml + '</span></td>' +
       '<td class="wy-desc"><span class="bodycopy-2">' + r[1] + '</span></td>' +
-      '<td class="wy-type"><span class="navigation">' + r[2] + '</span></td>';
+      '<td class="wy-type"><span class="navigation">' + typeText + '</span></td>';
+    
     frag.appendChild(tr);
   });
+  
   tbody.appendChild(frag);
   table.appendChild(tbody);
 
-  filterRows('all');
-  applyButtonStyles();
+  var activeTab = tabsEl.querySelector('.wy-tab.active');
+  var initialFilter = activeTab ? activeTab.dataset.f : 'all';
+  filterRows(initialFilter);
 
   tabsEl.onclick = function(e) {
     var btn = e.target.closest('.wy-tab');
     if (!btn) return;
     document.querySelectorAll('.wy-tab').forEach(function(t) {
       t.classList.remove('active');
-      t.style.cssText = OFF;
     });
     btn.classList.add('active');
-    btn.style.cssText = ON;
     filterRows(btn.dataset.f);
   };
 }
