@@ -17,7 +17,7 @@ var HIGHLIGHTS = [
 // Format: ["YY.M.D|City", '<description HTML>', "TYPE", ["category"]]
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 var D = [
-  ["26.6.23",                  '<a href="https://analogue.press/p/the-revival-funds-inaugural-cohort"><b>The Revival Fund</b> Announcing our inaugural cohort of grantees. </a>',"INITIATIVE", ["initiatives"]],
+  ["26.6.23",                  '<a href="https://analogue.press/p/the-revival-funds-inaugural-cohort"><b>The Revival Fund</b>, Announcing our inaugural cohort of grantees </a>',"INITIATIVE", ["initiatives"]],
   ["26.6.18|New York",         '<b>Office of Applied Strategy</b>, Practical Aesthetic Service, Panel with Sarah Hromack-Chan, Justin Morris-Marano, and Xandra Beverlin', "TALK", ["talk"]],
   ["26.6.12|New York",         '<a href="https://www.biodesignchallenge.org/summit-2026"><b>Biodesign Summit</b>, MoMA</a>', "TALK", ["talk"]],
   ["26.6.11|New York",         '<a href="https://www.instagram.com/p/DZc6QOolagR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><b>Hyundai Artlab</b>, Guest Editor, June Editor Pick</a>', "PUBLICATION", ["publication", "initiatives"]],
