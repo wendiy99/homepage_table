@@ -21,7 +21,7 @@ var D = [
   ["26.6.18|New York",         '<b>Office of Applied Strategy</b>, Practical Aesthetic Service, Panel with Sarah Hromack-Chan, Justin Morris-Marano, and Xandra Beverlin', "TALK", ["talk"], "26.6.18_Office of Applied Strategy.jpg"],
   ["26.6.12|New York",         '<a href="https://www.biodesignchallenge.org/summit-2026"><b>Biodesign Summit</b>, MoMA</a>', "TALK", ["talk"]],
   ["26.6.11|New York",         '<a href="https://www.instagram.com/p/DZc6QOolagR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><b>Hyundai Artlab</b>, Guest Editor, June Editor Pick</a>', "PUBLICATION", ["publication", "initiatives"]],
-  ["26.6.5|Melbourne",         '<a href="https://ncm.org.au/exhibitions/stigmergy#6"><b>NCM Melbourne</b>, "Stigmergy"</a>', "EXHIBITION", ["exhibition"]],
+  ["26.6.5|Melbourne",         '<a href="https://ncm.org.au/exhibitions/stigmergy#6"><b>NCM Melbourne</b>, "Stigmergy"</a>', "EXHIBITION", ["exhibition"], "26.6.5_NCM Stigmergy.png"],
   ["26.6.4|New York",          '<a href="https://www.onx.studio/onx-programming/onxscreens"><b>Onassis Foundation</b>, ONX Screens</a>', "EXHIBITION", ["exhibition"]],
   ["26.5.26",                  '<a href="https://www.artandmarket.net/conversation/2026/05/22/conversation-with-wendi-yan-h7z2r"><b>Art & Market</b>, "Conversation with Wendi Yan"</a>', "INTERVIEW", ["interview"]],
   ["26.5.12|Berlin",           '<a href="https://diffrakt.space/events/trees-and-termites-ghosts-and-goddesses/"><b>diffrakt</b>, "Trees and Termites, Ghosts and Goddesses", Screening</a>', "EXHIBITION", ["exhibition"]],
@@ -38,6 +38,7 @@ var D = [
   ["26.3.6|New York",          '<b>Projekt Blank</b>, "Unstable Systems", conversation with Ivana Dama and Ben Shirken', "TALK", ["talk"]],
   ["26.3|Los Angeles",         '<b>LA Central Library</b>', "EXHIBITION", ["exhibition"]],
   ["26.3|New York",            '<b>Google</b>, Flow Session Artist', "RESIDENCY", ["residency"]],
+  ["26.3|online",              '<b>University of Pennsylvania</b>, Guest artist talk', "TALK", ["talk"]],
   ["26.2.28",                  '<a href="https://titles.substack.com/p/do-ais-long-for-a-self-generating"><b>TITLES</b>, "Do AIs Long for a Self-Generating World?"</a>', "PUBLICATION", ["publication"]],
   ["26.2.28|Los Angeles",      '"Code Name: Doll House"', "EXHIBITION", ["exhibition"]],
   ["26.2.19",                  '<a href="https://therevivalfund.com/"><b>The Revival Fund</b></a>, Open Call Launches', "INITIATIVE", ["initiatives"]],
@@ -46,7 +47,6 @@ var D = [
   ["26.1.20|Singapore",        '<b>Artspace @ Helutrans Gallery 1</b>, "The 6th VH Award", Singapore Art Week', "EXHIBITION", ["exhibition"]],
   ["26.1.9|Shanghai",          '<b>BANK</b>, "New Earth"', "EXHIBITION", ["exhibition"], "26.1.9_BANK.png"],
   ["25.12.4",                  '<b>China Academy of Art</b>, Guest artist talk, Open Media Department, online', "TALK", ["talk"]],
-  ["26.3|online",              '<b>University of Pennsylvania</b>, Guest artist talk', "TALK", ["talk"]],
   ["25.12–26.1|New York",      '<b>A24 Labs</b>, Storyhacking Resident', "RESIDENCY", ["residency"]],
   ["25.11|Buenos Aires",       '<b>Valerie\'s Factory</b>, "Cafe.exe", curated by Alice Scope, co-presented with Serpentine FAE and Artdao', "EXHIBITION", ["exhibition"]],
   ["25.10.28",                 '<a href="https://www.youtube.com/watch?v=mhyY2SWZlro"><b>CIFRA TV</b>, "Wendi Yan on Worldbuilding, Extinction & Feeling Things for Mammoths."</a>', "INTERVIEW", ["interview"], "25.10.28_CIFRA TV.jpg"],
@@ -62,7 +62,7 @@ var D = [
   ["25.9.12|Berlin",           '<b>Hamburger Bahnhof</b>, "Videoart at Midnight," Berlin Art Week Garten', "SCREENING", ["exhibition"]],
   ["25.9.11–10.31|Shanghai",   '<b>BAM</b>, "Cosmic Arclight", curated by Iris Long', "EXHIBITION", ["exhibition"]],
   ["25.9.5|Spain",             '<a href="https://soloaiaward.com/">SOLO AI Award, Finalist, Onkaos</a>', "AWARD", ["residency"]],
-  ["25.9.3–7|Linz, Austria",   '<a href="https://ars.electronica.art/panic/en/view/artists-perspective-23038ddb450c80e7a1a0e59cda51d5dc/"><b>Ars Electronica Festival</b>, Artist talk at the Expanded Conference, VH Award Presentation, Deep Space</a>', "EXHIBITION<br>TALK", ["exhibition","talk"]],
+  ["25.9.3–7|Linz, Austria",   '<a href="https://ars.electronica.art/panic/en/view/artists-perspective-23038ddb450c80e7a1a0e59cda51d5dc/"><b>Ars Electronica Festival</b>, Artist talk at the Expanded Conference, VH Award Presentation, Deep Space</a>', "EXHIBITION<br>TALK", ["exhibition","talk"], "25.9.3_Ars Electronica.jpg"],
   ["25.9",                     '<a href="https://www.monopol-magazin.de/wendi-yan-verschiedene-versionen-der-realitaet"><b>Monopol Magazine</b>, "Watchlist", written by Elke Buhr</a>', "INTERVIEW", ["interview"]],
   ["25.8.23|San Francisco",    '"Visions of Phosphine Earth", Slash', "EXHIBITION", ["exhibition"]],
   ["25.8.6",                   '<a href="https://ars.electronica.art/aeblog/en/2025/08/06/the-6th-vh-award-a-dream-that-wanders-as-if-it-were-real/"><b>Ars Electronica Blog</b>, Son Hyerim, "The 6th VH Award: A Dream That Wanders as If It Were Real"</a>', "INTERVIEW", ["interview"]],
@@ -81,20 +81,20 @@ var D = [
   ["25.6.19",                  '<a href="https://reader.futureartecosystems.org/briefing/fae5/05-artist"><b>Serpentine</b>, Future Art Ecosystems 5: Art x Creative R&D, Contributor</a>', "EDITORIAL", ["interview"]],
   ["25.6.18",                  '<a href="https://www.artasiapacific.com/shows/the-vh-award-announces-grand-prix-recipient-and-exhibitions-of-the-6th-vh-award/"><b>ArtAsiaPacific</b>, "The VH Award Announced Grand Prix Recipient and Exhibitions of the 6th VH Award"</a>', "PRESS", ["press"]],
   ["25.6.18",                  '<a href="https://www.e-flux.com/announcements/659673/sixth-vh-award-grand-prix-recipient-and-exhibitions/"><b>e-flux</b>, "Sixth VH AWARD Grand Prix recipient and exhibitions"</a>', "PRESS", ["press"]],
-  ["25.6.18",                  '<b>Hyundai Motor Group, The Sixth VH Award, Grand Prix</b>, Press: <a href="https://www.e-flux.com/announcements/659673/sixth-vh-award-grand-prix-recipient-and-exhibitions/">e-flux</a>, <a href="https://www.artasiapacific.com/shows/the-vh-award-announces-grand-prix-recipient-and-exhibitions-of-the-6th-vh-award/">ArtAsiaPacific</a>, <a href="https://www.monopol-magazin.de/vh-award-2025-geht-wendi-yan-fuer-dream-walnut-palaces">Monopol</a>, <a href="https://www.spikeartmagazine.com/articles/sixth-vh-award-hek-basel">Spike</a>', "AWARD<br>PRESS", ["residency","press"]],
-  ["25.6.16–8.31|Beijing",     '<a href="https://motorstudio.hyundai.com.cn/english/list-45.html"><b>Hyundai Motorstudio</b>, The 6th VH Award Exhibition</a>', "EXHIBITION", ["exhibition"]],
-  ["25.6.16–22|Basel",         '<a href="https://hek.ch/programm/ausstellungen/6th-vh-award"><b>House of Electronic Arts (HEK)</b>, The 6th VH Award</a>', "EXHIBITION", ["exhibition"]],
+  ["25.6.18",                  '<b>Hyundai Motor Group, The Sixth VH Award, Grand Prix</b>, Press: <a href="https://www.e-flux.com/announcements/659673/sixth-vh-award-grand-prix-recipient-and-exhibitions/">e-flux</a>, <a href="https://www.artasiapacific.com/shows/the-vh-award-announces-grand-prix-recipient-and-exhibitions-of-the-6th-vh-award/">ArtAsiaPacific</a>, <a href="https://www.monopol-magazin.de/vh-award-2025-geht-wendi-yan-fuer-dream-walnut-palaces">Monopol</a>, <a href="https://www.spikeartmagazine.com/articles/sixth-vh-award-hek-basel">Spike</a>', "AWARD<br>PRESS", ["residency","press"], "25.6.18_Vision Hall.jpg"],
+  ["25.6.16–8.31|Beijing",     '<a href="https://motorstudio.hyundai.com.cn/english/list-45.html"><b>Hyundai Motorstudio</b>, The 6th VH Award Exhibition</a>', "EXHIBITION", ["exhibition"], "25.6.18_Hyundai Motorstudio.jpg"],
+  ["25.6.16–22|Basel",         '<a href="https://hek.ch/programm/ausstellungen/6th-vh-award"><b>House of Electronic Arts (HEK)</b>, The 6th VH Award</a>', "EXHIBITION", ["exhibition"], "25.6.16_HEK.jpeg"],
   ["25.6.6",                   '<a href="https://artlab.hyundai.com/editorial/q-and-a-with-dawn-chan-and-the-6th-vh-award-finalists-technological-mythmaking-part-1"><b>Hyundai Artlab</b>, "Q&A with Dawn Chan and the 6th VH AWARD Finalists: Technological Mythmaking", written by Dawn Chan</a>', "INTERVIEW", ["interview"]],
   ["25.6.6|New York",          '<b><a href="https://www.demofestival.org/">NEW INC DEMO 2025</a></b>, conversation with Darren Zhu', "TALK", ["talk"]],
   ["25.6",                     '<b>South Park Commons</b>, Member Residency', "RESIDENCY", ["residency"]],
   ["25.5.4|New York",          '<a href="https://rhizome.org/events/survival-strategies/"><b>Rhizome World</b>, Survival Strategies: The Dao of Planetary Breath, conversation with Yunuen Rhi, Banyi Huang and Zandie Brockett</a>', "TALK", ["talk"]],
-  ["25.5.3–8.23|San Francisco",'<a href="https://www.slashart.org/lagrange-point/"><b>Slash</b>, "Lagrange Point", curated by Ninth Planet</a>', "EXHIBITION", ["exhibition"]],
+  ["25.5.3–8.23|San Francisco",'<a href="https://www.slashart.org/lagrange-point/"><b>Slash</b>, "Lagrange Point", curated by Ninth Planet</a>', "EXHIBITION", ["exhibition"], "25.5.3_Slash.jpg"],
   ["25.4.29",                  '<b>Princeton University</b>, Visual Arts Panel, Alumni Day', "TALK", ["talk"]],
   ["25.4.22",                  '<b>Rutgers Design Lecture Series</b>, Artist talk, New Brunswick NJ', "TALK", ["talk"]],
   ["25.4–5",                   '<b>Fuser Residency</b>', "RESIDENCY", ["residency"]],
   ["25.3.19",                  '<b>NYU Shanghai</b>, Guest artist talk, "Baby by Design" by Flora Weil', "TALK", ["talk"]],
   ["25.3.11",                  '<a href="https://www.youtube.com/watch?v=QZvPNSwk3Gk"><b>Steve Jobs Archive Fellowship</b>, Year-end talk, recorded at Skywalker Ranch, October 2024</a>', "TALK", ["talk"]],
-  ["25.3.9|Austin",            '<b>SeedAI House at SXSW</b>, "Bio-Digital Play", conversation with Will Freudenheim', "TALK", ["talk"]],
+  ["25.3.9|Austin",            '<b>SeedAI House at SXSW</b>, "Bio-Digital Play", conversation with Will Freudenheim', "TALK", ["talk"], "25.3.9_SeedAI.jpeg"],
   ["25.3.2|Los Angeles",       '<b>Now Instant Image Hall</b>, "Kevin Peter He, Wendi Yan, Alice Bucknell: Cinematic Engine"', "EXHIBITION", ["exhibition"]],
   ["25.2.8",                   '<b>M+ Museum and Design Trust</b>, Design in Rising Winds, research atlas by Flora Weil', "EXHIBITION", ["exhibition"]],
   ["25.2.3|New York",          '<a href="https://apossible.com/interviews/wendi-yan-is-an-artist"><b>APOSSIBLE</b>, "Wendi Yan, Artist"</a>', "INTERVIEW", ["interview"]],
@@ -107,7 +107,7 @@ var D = [
   ["24.10.25|New York",        '<b>HEART 442 Broadway</b>, Lavender Town', "EXHIBITION", ["exhibition"]],
   ["24.10.19|New York",        '"Tale of the Mammoth Goddess", Cinema Village, Science New Wave Festival', "EXHIBITION", ["exhibition"]],
   ["24.9.22|Spain",            '<b>Evaristo Valle Museum</b>, "Cyborg Horizons"', "EXHIBITION", ["exhibition"]],
-  ["24.9.14|San Francisco",    '<a href="https://2024.grayareafestival.io/"><b>Gray Area Festival 10</b></a>, "Putting History into the Future"', "TALK", ["talk"]],
+  ["24.9.14|San Francisco",    '<a href="https://2024.grayareafestival.io/"><b>Gray Area Festival 10</b></a>, "Putting History into the Future"', "TALK", ["talk"], "24.9.14_Gray Area Festival 10.jpg"],
   ["24.9–12|New York",         '<a href="https://eyebeam.org/"><b>Eyebeam Residency</b></a>', "RESIDENCY", ["residency"]],
   ["24.9|Tokyo",               '<b>MESH Studio</b>, Digital Architecture Lab', "GRANT", ["residency"]],
   ["24.8.26|Seoul",            '<a href="https://vhaward.com/6th-award/">The 6th VH Award, Finalist, Hyundai Motor Group</a>', "AWARD", ["residency"]],
@@ -125,7 +125,7 @@ var D = [
   ["23|online",                '<b>Stanford HAI Generative AI Working Group</b>, "Beyond Imitation: Alien Worldbuilding with AI"', "TALK", ["talk"]],
   ["23.9.18",                  '<a href="https://www.wallpaper.com/tech/the-steve-jobs-archive-announces-the-first-recipients-of-its-creative-fellowship"><b>Wallpaper</b>, "The Steve Jobs Archive announces the first recipients of its creative fellowship"</a>', "PRESS", ["press"]],
   ["23.7",                     '<a href="https://www.coeval-magazine.com/coeval/wendi-yan"><b>Coeval Magazine</b>, "Wendi Yan", written by Oscar Salguero</a>', "INTERVIEW", ["interview"]],
-  ["23.5|Princeton NJ",        '<a href="https://vimeo.com/829835865"><b>Lewis Center for the Arts, Princeton University</b>, "A Tiny Museum of Mammoth Technologies"</a>', "SOLO EXHIBITION ✦<br>EDITORIAL", ["exhibition","interview"], "MammothTechnology.png"],
+  ["23.5|Princeton NJ",        '<a href="https://vimeo.com/829835865"><b>Lewis Center for the Arts, Princeton University</b>, "A Tiny Museum of Mammoth Technologies"</a>', "SOLO EXHIBITION ✦<br>EDITORIAL", ["exhibition","interview"], "23.5_Lewis Center for the Arts.png"],
   ["23.5.1|Princeton NJ",      '<b>Friend Center for Engineering Education, Princeton University</b>, "Art of Science"', "EXHIBITION", ["exhibition"]],
   ["22.7–8|New York",          '<b>Interact Residency</b>', "RESIDENCY", ["residency"]],
   ["22.6|Svalbard",            '<b>The Arctic Circle</b>, Art & Science Expedition', "RESIDENCY", ["residency"]],
@@ -235,6 +235,22 @@ function initTable() {
 
   var old = table.querySelector('tbody');
   if (old) old.remove();
+
+  // Dynamic chronological sort (most recent first) to keep entries always ordered
+  D.sort(function(a, b) {
+    function getSortScore(datePart) {
+      var dateStr = datePart.split('|')[0].trim();
+      if (dateStr.indexOf('–') > -1) {
+        dateStr = dateStr.split('–')[0].trim();
+      }
+      var parts = dateStr.split('.');
+      var y = parseInt(parts[0], 10) || 0;
+      var m = parseInt(parts[1], 10) || 0;
+      var d = parseInt(parts[2], 10) || 0;
+      return (y * 10000) + (m * 100) + d;
+    }
+    return getSortScore(b[0]) - getSortScore(a[0]);
+  });
 
   var tbody = document.createElement('tbody');
   var frag = document.createDocumentFragment();
