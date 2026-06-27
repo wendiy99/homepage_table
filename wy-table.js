@@ -18,7 +18,7 @@ var HIGHLIGHTS = [
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 var D = [
   ["26.6.23",                  '<a href="https://analogue.press/p/the-revival-funds-inaugural-cohort"><b>The Revival Fund</b>, Announcing our inaugural cohort of grantees </a>',"INITIATIVE", ["initiatives"]],
-  ["26.6.18|New York",         '<b>Office of Applied Strategy</b>, Practical Aesthetic Service, Panel with Sarah Hromack-Chan, Justin Morris-Marano, and Xandra Beverlin', "TALK", ["talk"]],
+  ["26.6.18|New York",         '<b>Office of Applied Strategy</b>, Practical Aesthetic Service, Panel with Sarah Hromack-Chan, Justin Morris-Marano, and Xandra Beverlin', "TALK", ["talk"], "26.6.18_Office of Applied Strategy.jpg"],
   ["26.6.12|New York",         '<a href="https://www.biodesignchallenge.org/summit-2026"><b>Biodesign Summit</b>, MoMA</a>', "TALK", ["talk"]],
   ["26.6.11|New York",         '<a href="https://www.instagram.com/p/DZc6QOolagR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><b>Hyundai Artlab</b>, Guest Editor, June Editor Pick</a>', "PUBLICATION", ["publication", "initiatives"]],
   ["26.6.5|Melbourne",         '<a href="https://ncm.org.au/exhibitions/stigmergy#6"><b>NCM Melbourne</b>, "Stigmergy"</a>', "EXHIBITION", ["exhibition"]],
@@ -30,7 +30,7 @@ var D = [
   ["26.4.20|San Francisco",    '<a href="https://newaesthetics.art/grants"><b>New Aesthetics Grant</b></a>', "GRANT", ["residency"]],
   ["26.3.25|Hong Kong",        '<a href="https://www.kaitaksportspark.com.hk/events-tickets/kai-tak-art-week-2026"><b>K11 | Kai Tak Art Week</b>, Panel with Jiabao Li and Connie Butler, Panel with Sougwen Chung and Scott Moore</a>', "TALK", ["talk"]],
   ["26.3.24|Hong Kong",        '<a><b>LACMA</b>, Digital Art Conversation</a>', "TALK", ["talk"]],
-  ["26.3.21|Singapore",        '<a href="https://www.marinabaysands.com/museum/programmes/talks/expanded-anatomies.html"><b>ArtScience Museum Singapore</b>, "Flesh and Bones: The Art of Anatomy", Opening Symposium</a>', "EXHIBITION<br>TALK", ["exhibition","talk"]],
+  ["26.3.21|Singapore",        '<a href="https://www.marinabaysands.com/museum/programmes/talks/expanded-anatomies.html"><b>ArtScience Museum Singapore</b>, "Flesh and Bones: The Art of Anatomy", Opening Symposium</a>', "EXHIBITION<br>TALK", ["exhibition","talk"], "26.3.21_ArtScience Museum.jpg"],
   ["26.3.17–29|Hong Kong",     '<a href="https://www.kaitaksportspark.com.hk/event/kai-tak-art-week-2026"><b>Kai Tak Art Week</b>, 脊石循息 The Cosmos Breathes through a Porous Body</a>', "EXHIBITION<br>TALK ✦", ["exhibition"]],
   ["26.3.16",                  '<a href="https://www.lerandom.art/editorial/wendi-yan-karyn-nakamura-on-the-artifice-of-knowledge"><b>Le Random</b>, "Wendi Yan & Karyn Nakamura on the Artifice of Knowledge"</a>', "INTERVIEW", ["interview"]],
   ["26.3.10|New York",         '"XTRTRRSTRLS", The Wythe', "EXHIBITION", ["exhibition"]],
@@ -44,16 +44,16 @@ var D = [
   ["26.2.7|online",            '<b>Future Finds</b>, "Beyond a thermodynamic energy future", conversation with Kelsey Chen', "TALK", ["talk"]],
   ["26.2.5",                   '<a href="https://interactfellowship.substack.com/p/in-conversation-with-wendi-yan"><b>Interact Fellowship</b>, Interview</a>', "INTERVIEW", ["interview"]],
   ["26.1.20|Singapore",        '<b>Artspace @ Helutrans Gallery 1</b>, "The 6th VH Award", Singapore Art Week', "EXHIBITION", ["exhibition"]],
-  ["26.1.9|Shanghai",          '<b>BANK</b>, "New Earth"', "EXHIBITION", ["exhibition"]],
+  ["26.1.9|Shanghai",          '<b>BANK</b>, "New Earth"', "EXHIBITION", ["exhibition"], "26.1.9_BANK.png"],
   ["25.12.4",                  '<b>China Academy of Art</b>, Guest artist talk, Open Media Department, online', "TALK", ["talk"]],
   ["26.3|online",              '<b>University of Pennsylvania</b>, Guest artist talk', "TALK", ["talk"]],
   ["25.12–26.1|New York",      '<b>A24 Labs</b>, Storyhacking Resident', "RESIDENCY", ["residency"]],
   ["25.11|Buenos Aires",       '<b>Valerie\'s Factory</b>, "Cafe.exe", curated by Alice Scope, co-presented with Serpentine FAE and Artdao', "EXHIBITION", ["exhibition"]],
-  ["25.10.28",                 '<a href="https://www.youtube.com/watch?v=mhyY2SWZlro"><b>CIFRA TV</b>, "Wendi Yan on Worldbuilding, Extinction & Feeling Things for Mammoths."</a>', "INTERVIEW", ["interview"]],
+  ["25.10.28",                 '<a href="https://www.youtube.com/watch?v=mhyY2SWZlro"><b>CIFRA TV</b>, "Wendi Yan on Worldbuilding, Extinction & Feeling Things for Mammoths."</a>', "INTERVIEW", ["interview"], "25.10.28_CIFRA TV.jpg"],
   ["25.10.21|New York",        '<b>Lux AI Summit</b>, Spring Studios', "EXHIBITION", ["exhibition"]],
   ["25.10.17–30|Shanghai",     '<b>TANK Art Center</b>, "The Electrified Kids", The 8th International Intermedia Festival', "EXHIBITION", ["exhibition"]],
-  ["25.10.11|Los Angeles",     '<b>SV Studios</b>, "New Syntax", curated by Alice Scope', "EXHIBITION", ["exhibition"]],
-  ["25.10.3–26.2.1|Warsaw",    '<a href="https://u-jazdowski.pl/en/programme/exhibitions/if-then"><b>Ujazdowski Castle Center for Contemporary Art</b>, "If/then", curated by Sara Szostak, Marta Grytczuk</a>', "EXHIBITION", ["exhibition"]],
+  ["25.10.11|Los Angeles",     '<b>SV Studios</b>, "New Syntax", curated by Alice Scope', "EXHIBITION", ["exhibition"], "25.10.11_SV Studios.jpg"],
+  ["25.10.3–26.2.1|Warsaw",    '<a href="https://u-jazdowski.pl/en/programme/exhibitions/if-then"><b>Ujazdowski Castle Center for Contemporary Art</b>, "If/then", curated by Sara Szostak, Marta Grytczuk</a>', "EXHIBITION", ["exhibition"], "25.10.3_Ujazdowski.jpg"],
   ["25.10",                    '<a href="https://www.britishcouncil.org/research-insight/arts-and-technologies-china"><b>British Council</b>, "China Art and Technology Report"</a>', "PRESS", ["press"]],
   ["25.10",                    '<a href="https://mp.weixin.qq.com/s/KYRMpUNSQL713dZtU6lMBw"><b>Numero Magazine (China)</b>, "会见空腔"</a>', "INTERVIEW", ["interview"]],
   ["25.10",                    '<a href="https://berggruen.org/library/proxima-kosmos-volume-2"><b>Berggruen Press</b>, "Science in the Unhomely Clouds", in <i>Proxima Kósmos: Volume II</i>, ed. Claire Webb</a>', "PUBLICATION", ["publication"]],
@@ -125,7 +125,7 @@ var D = [
   ["23|online",                '<b>Stanford HAI Generative AI Working Group</b>, "Beyond Imitation: Alien Worldbuilding with AI"', "TALK", ["talk"]],
   ["23.9.18",                  '<a href="https://www.wallpaper.com/tech/the-steve-jobs-archive-announces-the-first-recipients-of-its-creative-fellowship"><b>Wallpaper</b>, "The Steve Jobs Archive announces the first recipients of its creative fellowship"</a>', "PRESS", ["press"]],
   ["23.7",                     '<a href="https://www.coeval-magazine.com/coeval/wendi-yan"><b>Coeval Magazine</b>, "Wendi Yan", written by Oscar Salguero</a>', "INTERVIEW", ["interview"]],
-  ["23.5|Princeton NJ",        '<a href="https://vimeo.com/829835865"><b>Lewis Center for the Arts, Princeton University</b>, "A Tiny Museum of Mammoth Technologies"</a>', "SOLO EXHIBITION ✦<br>EDITORIAL", ["exhibition","interview"]],
+  ["23.5|Princeton NJ",        '<a href="https://vimeo.com/829835865"><b>Lewis Center for the Arts, Princeton University</b>, "A Tiny Museum of Mammoth Technologies"</a>', "SOLO EXHIBITION ✦<br>EDITORIAL", ["exhibition","interview"], "MammothTechnology.png"],
   ["23.5.1|Princeton NJ",      '<b>Friend Center for Engineering Education, Princeton University</b>, "Art of Science"', "EXHIBITION", ["exhibition"]],
   ["22.7–8|New York",          '<b>Interact Residency</b>', "RESIDENCY", ["residency"]],
   ["22.6|Svalbard",            '<b>The Arctic Circle</b>, Art & Science Expedition', "RESIDENCY", ["residency"]],
@@ -156,6 +156,71 @@ function initTable() {
     return;
   }
 
+  // Detect where the script is hosted to support both local testing and production absolute URL
+  var scriptSrc = document.currentScript ? document.currentScript.src : '';
+  var imageBase = 'https://wendiy99.github.io/homepage_table/images/';
+  if (scriptSrc) {
+    var lastSlash = scriptSrc.lastIndexOf('/');
+    if (lastSlash > -1) {
+      imageBase = scriptSrc.substring(0, lastSlash) + '/images/';
+    }
+  }
+
+  // Inject styles for the hover preview container if not already present
+  if (!document.getElementById('wy-table-injected-style')) {
+    var style = document.createElement('style');
+    style.id = 'wy-table-injected-style';
+    style.textContent = [
+      '.wy-hover-preview {',
+      '  position: fixed;',
+      '  pointer-events: none;',
+      '  z-index: 10000;',
+      '  opacity: 0;',
+      '  transform: translate(15px, -50%) scale(0.95);',
+      '  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);',
+      '  box-shadow: 0 10px 30px rgba(0,0,0,0.12);',
+      '  border-radius: 6px;',
+      '  overflow: hidden;',
+      '  background: #ffffff;',
+      '  border: 1px solid rgba(0,0,0,0.08);',
+      '  width: 240px;',
+      '  height: auto;',
+      '  display: none;',
+      '}',
+      '.wy-hover-preview.active {',
+      '  opacity: 1;',
+      '  transform: translate(15px, -50%) scale(1);',
+      '}',
+      '.wy-hover-preview img {',
+      '  display: block;',
+      '  width: 100%;',
+      '  height: auto;',
+      '  max-height: 180px;',
+      '  object-fit: cover;',
+      '}',
+      '@media screen and (max-width: 768px), (hover: none) {',
+      '  .wy-hover-preview {',
+      '    display: none !important;',
+      '  }',
+      '}'
+    ].join('\n');
+    document.head.appendChild(style);
+  }
+
+  // Create hover preview container in document.body if it doesn't exist
+  var previewEl = document.getElementById('wy-hover-preview');
+  if (!previewEl) {
+    previewEl = document.createElement('div');
+    previewEl.id = 'wy-hover-preview';
+    previewEl.className = 'wy-hover-preview';
+    
+    var previewImg = document.createElement('img');
+    previewImg.id = 'wy-hover-preview-img';
+    previewEl.appendChild(previewImg);
+    
+    document.body.appendChild(previewEl);
+  }
+
   if (!tabsEl.querySelector('[data-f="initiatives"]')) {
     var initBtn = document.createElement('button');
     initBtn.className = 'wy-tab';
@@ -179,6 +244,11 @@ function initTable() {
     tr.dataset.cats = r[3].join(',');
     tr.dataset.hi   = HIGHLIGHTS.indexOf(r[0]) > -1 ? '1' : '0';
     
+    if (r[4]) {
+      tr.dataset.img = r[4];
+      tr.classList.add('wy-has-preview');
+    }
+
     if (r[1].indexOf('Grand Prix') > -1) {
       tr.classList.add('wy-grand-prix');
     }
@@ -201,6 +271,74 @@ function initTable() {
   
   tbody.appendChild(frag);
   table.appendChild(tbody);
+
+  // Setup hover event listeners on tbody (delegated)
+  var previewTimeout = null;
+
+  tbody.addEventListener('mouseover', function(e) {
+    var tr = e.target.closest('tr');
+    if (!tr || !tr.dataset.img) return;
+    
+    var previewEl = document.getElementById('wy-hover-preview');
+    var previewImg = document.getElementById('wy-hover-preview-img');
+    if (!previewEl || !previewImg) return;
+    
+    if (previewTimeout) {
+      clearTimeout(previewTimeout);
+      previewTimeout = null;
+    }
+    
+    previewImg.src = imageBase + tr.dataset.img;
+    previewEl.style.display = 'block';
+    
+    // Force layout reflow to make sure transition starts smoothly
+    void previewEl.offsetWidth;
+    
+    previewEl.classList.add('active');
+  });
+
+  tbody.addEventListener('mouseout', function(e) {
+    var tr = e.target.closest('tr');
+    if (!tr || !tr.dataset.img) return;
+    
+    var related = e.relatedTarget;
+    if (related && tr.contains(related)) return;
+    
+    var previewEl = document.getElementById('wy-hover-preview');
+    if (previewEl) {
+      previewEl.classList.remove('active');
+      if (previewTimeout) clearTimeout(previewTimeout);
+      previewTimeout = setTimeout(function() {
+        previewEl.style.display = 'none';
+      }, 200);
+    }
+  });
+
+  tbody.addEventListener('mousemove', function(e) {
+    var previewEl = document.getElementById('wy-hover-preview');
+    if (!previewEl || !previewEl.classList.contains('active')) return;
+    
+    var x = e.clientX;
+    var y = e.clientY;
+    var width = previewEl.offsetWidth || 240;
+    var height = previewEl.offsetHeight || 150;
+    
+    var posX = x + 15;
+    var posY = y - height / 2;
+    
+    // Boundary check so preview stays in viewport
+    if (posX + width > window.innerWidth) {
+      posX = x - width - 15;
+    }
+    if (posY < 10) {
+      posY = 10;
+    } else if (posY + height > window.innerHeight) {
+      posY = window.innerHeight - height - 10;
+    }
+    
+    previewEl.style.left = posX + 'px';
+    previewEl.style.top = posY + 'px';
+  });
 
   var activeTab = tabsEl.querySelector('.wy-tab.active');
   var initialFilter = activeTab ? activeTab.dataset.f : 'all';
