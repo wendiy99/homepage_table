@@ -187,35 +187,37 @@ function initTable() {
       '  height: auto;',
       '  display: none;',
       '}',
-      '.wy-table td.wy-type {',
+      '[id="T3057851291"] .wy-table td.wy-type {',
       '  white-space: nowrap !important;',
       '}',
-      '.wy-table .c-date {',
+      '[id="T3057851291"] .wy-table .c-date {',
       '  width: 135px !important;',
       '}',
-      '.wy-table td.wy-date {',
+      '[id="T3057851291"] .wy-table td.wy-date {',
       '  width: 135px !important;',
       '  min-width: 135px !important;',
       '}',
-      '.wy-table .c-type {',
+      '[id="T3057851291"] .wy-table .c-type {',
       '  width: 110px !important;',
       '}',
-      '.wy-table td.wy-type {',
+      '[id="T3057851291"] .wy-table td.wy-type {',
       '  width: 110px !important;',
       '  min-width: 110px !important;',
       '}',
-      '.wy-tabs {',
+      '[id="T3057851291"] .wy-tabs {',
       '  display: flex !important;',
-      '  flex-wrap: nowrap !important;',
-      '  overflow-x: auto !important;',
-      '  white-space: nowrap !important;',
+      '  flex-direction: column !important;',
+      '  gap: 0.5rem !important;',
+      '  border-bottom: 1px solid #e8e8e8 !important;',
+      '  padding: 0.6rem 0 0.7rem !important;',
+      '  background: #ffffff !important;',
+      '}',
+      '[id="T3057851291"] .wy-tabs-row {',
+      '  display: flex !important;',
       '  gap: 0.35rem !important;',
-      '  scrollbar-width: none !important;',
+      '  flex-wrap: wrap !important;',
       '}',
-      '.wy-tabs::-webkit-scrollbar {',
-      '  display: none !important;',
-      '}',
-      '.wy-tab {',
+      '[id="T3057851291"] .wy-tab {',
       '  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;',
       '  font-size: 0.65em !important;',
       '  padding: 4px 8px !important;',
@@ -235,6 +237,32 @@ function initTable() {
       '@media screen and (max-width: 768px), (hover: none) {',
       '  .wy-hover-preview {',
       '    display: none !important;',
+      '  }',
+      '}',
+      '@media screen and (max-width: 768px) {',
+      '  [id="T3057851291"] .wy-table .c-date {',
+      '    width: 80px !important;',
+      '  }',
+      '  [id="T3057851291"] .wy-table td.wy-date {',
+      '    width: 80px !important;',
+      '    min-width: 80px !important;',
+      '  }',
+      '  [id="T3057851291"] .wy-table td.wy-date span,',
+      '  [id="T3057851291"] .wy-table td.wy-date span span {',
+      '    font-size: 0.58em !important;',
+      '  }',
+      '  [id="T3057851291"] .wy-table .c-type {',
+      '    width: 70px !important;',
+      '  }',
+      '  [id="T3057851291"] .wy-table td.wy-type {',
+      '    width: 70px !important;',
+      '    min-width: 70px !important;',
+      '  }',
+      '  [id="T3057851291"] .wy-table td.wy-type span {',
+      '    font-size: 0.58em !important;',
+      '  }',
+      '  [id="T3057851291"] .wy-table td {',
+      '    padding: 5px 4px 5px 0 !important;',
       '  }',
       '}'
     ].join('\n');
@@ -261,6 +289,31 @@ function initTable() {
     initBtn.dataset.f = 'initiatives';
     initBtn.textContent = 'Initiatives';
     tabsEl.appendChild(initBtn);
+  }
+
+  // Split tabs into two rows: Row 1 (Selected & All), Row 2 (Categories)
+  if (!tabsEl.querySelector('.wy-tabs-row')) {
+    var row1 = document.createElement('div');
+    row1.className = 'wy-tabs-row wy-tabs-row-1';
+    var row2 = document.createElement('div');
+    row2.className = 'wy-tabs-row wy-tabs-row-2';
+    
+    var btnHighlight = tabsEl.querySelector('[data-f="highlight"]');
+    var btnAll = tabsEl.querySelector('[data-f="all"]');
+    
+    if (btnHighlight) row1.appendChild(btnHighlight);
+    if (btnAll) row1.appendChild(btnAll);
+    
+    var remainingBtns = Array.from(tabsEl.querySelectorAll('.wy-tab'));
+    remainingBtns.forEach(function(btn) {
+      if (btn !== btnHighlight && btn !== btnAll) {
+        row2.appendChild(btn);
+      }
+    });
+    
+    tabsEl.innerHTML = '';
+    tabsEl.appendChild(row1);
+    tabsEl.appendChild(row2);
   }
 
   document.querySelectorAll('.wy-tab').forEach(function(btn) {

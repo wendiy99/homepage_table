@@ -47,11 +47,8 @@
     /* ACTIVITY TABLE */
     [id="T3057851291"] .wy-tabs {
         display: flex;
-        gap: 0.35rem;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        white-space: nowrap !important;
-        scrollbar-width: none !important;
+        flex-direction: column;
+        gap: 0.5rem;
         flex-shrink: 0;
         margin: 0;
         padding: 0.6rem 0 0.7rem;
@@ -59,8 +56,10 @@
         background: #ffffff;
     }
 
-    [id="T3057851291"] .wy-tabs::-webkit-scrollbar {
-        display: none !important;
+    [id="T3057851291"] .wy-tabs-row {
+        display: flex;
+        gap: 0.35rem;
+        flex-wrap: wrap;
     }
 
     /* CLEAN TAB BUTTON STYLES MIGRATED FROM JS */
@@ -176,6 +175,33 @@
 
     [id="T3057851291"] .wy-table tr:hover .wy-solo-marker {
         color: #ffcc80 !important;
+    }
+
+    @media screen and (max-width: 768px) {
+        [id="T3057851291"] .wy-table .c-date {
+            width: 85px !important;
+        }
+        [id="T3057851291"] .wy-table td.wy-date {
+            width: 85px !important;
+            min-width: 85px !important;
+        }
+        [id="T3057851291"] .wy-table td.wy-date span,
+        [id="T3057851291"] .wy-table td.wy-date span span {
+            font-size: 0.58em !important;
+        }
+        [id="T3057851291"] .wy-table .c-type {
+            width: 75px !important;
+        }
+        [id="T3057851291"] .wy-table td.wy-type {
+            width: 75px !important;
+            min-width: 75px !important;
+        }
+        [id="T3057851291"] .wy-table td.wy-type span {
+            font-size: 0.58em !important;
+        }
+        [id="T3057851291"] .wy-table td {
+            padding: 5px 4px 5px 0 !important;
+        }
     }
   </style>
 </head>
