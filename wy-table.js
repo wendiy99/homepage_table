@@ -29,7 +29,7 @@ var D = [
   ["26.4.28|Geneva",           '<a href="https://arts.cern/artist/wendi-yan/"><b>CERN Collide Stockholm</b>, Honorary Mention</a>', "RESIDENCY", ["residency"], "26.4.28_CERN.png"],
   ["26.4.20|San Francisco",    '<a href="https://newaesthetics.art/grants"><b>New Aesthetics Grant</b></a>', "GRANT", ["residency"]],
   ["26.3.25|Hong Kong",        '<a href="https://www.kaitaksportspark.com.hk/events-tickets/kai-tak-art-week-2026"><b>K11 | Kai Tak Art Week</b>, Panel with Jiabao Li and Connie Butler, Panel with Sougwen Chung and Scott Moore</a>', "TALK", ["talk"], "26.3.25_Kai Tak Art Week.jpg"],
-  ["26.3.24|Hong Kong",        '<a><b>LACMA</b>, Digital Art Conversation</a>', "TALK", ["talk"], "26.3.24_LACMA.jpg"],
+  ["26.3.24|Hong Kong",        '<a href="https://mc2.art/events/lacma-digital-leaders-digital-art-conversations"><b>LACMA</b>, Digital Art Conversation</a>', "TALK", ["talk"], "26.3.24_LACMA.jpg"],
   ["26.3.21|Singapore",        '<a href="https://www.marinabaysands.com/museum/programmes/talks/expanded-anatomies.html"><b>ArtScience Museum Singapore</b>, "Flesh and Bones: The Art of Anatomy", Opening Symposium</a>', "EXHIBITION<br>TALK", ["exhibition","talk"], "26.3.21_ArtScience Museum.jpg"],
   ["26.3.17–29|Hong Kong",     '<a href="https://www.kaitaksportspark.com.hk/event/kai-tak-art-week-2026"><b>Kai Tak Art Week</b>, 脊石循息 The Cosmos Breathes through a Porous Body</a>', "EXHIBITION<br>TALK ✦", ["exhibition"], "26.3.17_Kai Tak Art Week.jpg"],
   ["26.3.16",                  '<a href="https://www.lerandom.art/editorial/wendi-yan-karyn-nakamura-on-the-artifice-of-knowledge"><b>Le Random</b>, "Wendi Yan & Karyn Nakamura on the Artifice of Knowledge"</a>', "INTERVIEW", ["interview"]],
