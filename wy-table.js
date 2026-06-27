@@ -17,7 +17,7 @@ var HIGHLIGHTS = [
 // Format: ["YY.M.D|City", '<description HTML>', "TYPE", ["category"]]
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 var D = [
-  ["26.6.23",                  '<a href="https://analogue.press/p/the-revival-funds-inaugural-cohort"><b>The Revival Fund</b>, Announcing our inaugural cohort of grantees </a>',"INITIATIVE", ["initiatives"]],
+  ["26.6.23",                  '<a href="https://analogue.press/p/the-revival-funds-inaugural-cohort"><b>The Revival Fund</b>, Announcing our inaugural cohort of grantees </a>',"INITIATIVE", ["initiatives"], "26.6.23_Revival Fund.png"],
   ["26.6.18|New York",         '<b>Office of Applied Strategy</b>, Practical Aesthetic Service, Panel with Sarah Hromack-Chan, Justin Morris-Marano, and Xandra Beverlin', "TALK", ["talk"], "26.6.18_Office of Applied Strategy.jpg"],
   ["26.6.12|New York",         '<a href="https://www.biodesignchallenge.org/summit-2026"><b>Biodesign Summit</b>, MoMA</a>', "TALK", ["talk"]],
   ["26.6.11|New York",         '<a href="https://www.instagram.com/p/DZc6QOolagR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><b>Hyundai Artlab</b>, Guest Editor, June Editor Pick</a>', "PUBLICATION", ["publication", "initiatives"]],
@@ -26,7 +26,7 @@ var D = [
   ["26.5.26",                  '<a href="https://www.artandmarket.net/conversation/2026/05/22/conversation-with-wendi-yan-h7z2r"><b>Art & Market</b>, "Conversation with Wendi Yan"</a>', "INTERVIEW", ["interview"]],
   ["26.5.12|Berlin",           '<a href="https://diffrakt.space/events/trees-and-termites-ghosts-and-goddesses/"><b>diffrakt</b>, "Trees and Termites, Ghosts and Goddesses", Screening</a>', "EXHIBITION", ["exhibition"]],
   ["26.5.8|Venice",            '<a href="https://www.cyfest.art/cyfest-17-venice"><b>CYFEST 17</b>, International Media Art Festival</a>', "EXHIBITION", ["exhibition"]],
-  ["26.4.28|Geneva",           '<a href="https://arts.cern/artist/wendi-yan/"><b>CERN Collide Stockholm</b>, Honorary Mention</a>', "RESIDENCY", ["residency"]],
+  ["26.4.28|Geneva",           '<a href="https://arts.cern/artist/wendi-yan/"><b>CERN Collide Stockholm</b>, Honorary Mention</a>', "RESIDENCY", ["residency"], "26.4.28_CERN.png"],
   ["26.4.20|San Francisco",    '<a href="https://newaesthetics.art/grants"><b>New Aesthetics Grant</b></a>', "GRANT", ["residency"]],
   ["26.3.25|Hong Kong",        '<a href="https://www.kaitaksportspark.com.hk/events-tickets/kai-tak-art-week-2026"><b>K11 | Kai Tak Art Week</b>, Panel with Jiabao Li and Connie Butler, Panel with Sougwen Chung and Scott Moore</a>', "TALK", ["talk"]],
   ["26.3.24|Hong Kong",        '<a><b>LACMA</b>, Digital Art Conversation</a>', "TALK", ["talk"]],
@@ -44,7 +44,7 @@ var D = [
   ["26.2.19",                  '<a href="https://therevivalfund.com/"><b>The Revival Fund</b></a>, Open Call Launches', "INITIATIVE", ["initiatives"]],
   ["26.2.7|online",            '<b>Future Finds</b>, "Beyond a thermodynamic energy future", conversation with Kelsey Chen', "TALK", ["talk"]],
   ["26.2.5",                   '<a href="https://interactfellowship.substack.com/p/in-conversation-with-wendi-yan"><b>Interact Fellowship</b>, Interview</a>', "INTERVIEW", ["interview"]],
-  ["26.1.20|Singapore",        '<b>Artspace @ Helutrans Gallery 1</b>, "The 6th VH Award", Singapore Art Week', "EXHIBITION", ["exhibition"]],
+  ["26.1.20|Singapore",        '<b>Artspace @ Helutrans Gallery 1</b>, "The 6th VH Award", Singapore Art Week', "EXHIBITION", ["exhibition"], "26.1.20_Artspace Helutrans.png"],
   ["26.1.9|Shanghai",          '<b>BANK</b>, "New Earth"', "EXHIBITION", ["exhibition"], "26.1.9_BANK.png"],
   ["25.12.4",                  '<b>China Academy of Art</b>, Guest artist talk, Open Media Department, online', "TALK", ["talk"]],
   ["25.12–26.1|New York",      '<b>A24 Labs</b>, Storyhacking Resident', "RESIDENCY", ["residency"]],
