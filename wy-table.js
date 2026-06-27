@@ -179,7 +179,7 @@ function initTable() {
       '  transform: translate(15px, -50%) scale(0.95);',
       '  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);',
       '  box-shadow: 0 10px 30px rgba(0,0,0,0.12);',
-      '  border-radius: 6px;',
+      '  border-radius: 0px;',
       '  overflow: hidden;',
       '  background: #ffffff;',
       '  border: 1px solid rgba(0,0,0,0.08);',
