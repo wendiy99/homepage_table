@@ -32,14 +32,14 @@ var D = [
   ["26.3.24|Hong Kong",        '<a href="https://mc2.art/events/lacma-digital-leaders-digital-art-conversations"><b>LACMA</b>, Digital Art Conversation</a>', "TALK", ["talk"], "26.3.24_LACMA.jpg"],
   ["26.3.21|Singapore",        '<a href="https://www.marinabaysands.com/museum/programmes/talks/expanded-anatomies.html"><b>ArtScience Museum Singapore</b>, "Flesh and Bones: The Art of Anatomy", Opening Symposium</a>', "EXHIBITION<br>TALK", ["exhibition","talk"], "26.3.21_ArtScience Museum.jpg"],
   ["26.3.17–29|Hong Kong",     '<a href="https://www.kaitaksportspark.com.hk/event/kai-tak-art-week-2026"><b>Kai Tak Art Week</b>, 脊石循息 The Cosmos Breathes through a Porous Body</a>', "EXHIBITION<br>TALK ✦", ["exhibition"], "26.3.17_Kai Tak Art Week.jpg"],
-  ["26.3.16",                  '<a href="https://www.lerandom.art/editorial/wendi-yan-karyn-nakamura-on-the-artifice-of-knowledge"><b>Le Random</b>, "Wendi Yan & Karyn Nakamura on the Artifice of Knowledge"</a>', "INTERVIEW", ["interview"]],
+  ["26.3.16",                  '<a href="https://www.lerandom.art/editorial/wendi-yan-karyn-nakamura-on-the-artifice-of-knowledge"><b>Le Random</b>, "Wendi Yan & Karyn Nakamura on the Artifice of Knowledge"</a>', "INTERVIEW", ["interview"], "26.3.16_Le Random.jpg"],
   ["26.3.10|New York",         '"XTRTRRSTRLS", The Wythe', "EXHIBITION", ["exhibition"]],
   ["26.3.8|Berkeley CA",       '<b>120710</b>, "One Molecule Said Yes to Another"', "EXHIBITION", ["exhibition"]],
   ["26.3.6|New York",          '<b>Projekt Blank</b>, "Unstable Systems", conversation with Ivana Dama and Ben Shirken', "TALK", ["talk"]],
   ["26.3|Los Angeles",         '<b>LA Central Library</b>', "EXHIBITION", ["exhibition"]],
   ["26.3|New York",            '<b>Google</b>, Flow Session Artist', "RESIDENCY", ["residency"]],
   ["26.3|online",              '<b>University of Pennsylvania</b>, Guest artist talk', "TALK", ["talk"]],
-  ["26.2.28",                  '<a href="https://titles.substack.com/p/do-ais-long-for-a-self-generating"><b>TITLES</b>, "Do AIs Long for a Self-Generating World?"</a>', "PUBLICATION", ["publication"]],
+  ["26.2.28",                  '<a href="https://titles.substack.com/p/do-ais-long-for-a-self-generating"><b>TITLES</b>, "Do AIs Long for a Self-Generating World?"</a>', "PUBLICATION", ["publication"], "26.2.28_TITLES.png"],
   ["26.2.28|Los Angeles",      '"Code Name: Doll House"', "EXHIBITION", ["exhibition"]],
   ["26.2.19",                  '<a href="https://therevivalfund.com/"><b>The Revival Fund</b></a>, Open Call Launches', "INITIATIVE", ["initiatives"]],
   ["26.2.7|online",            '<b>Future Finds</b>, "Beyond a thermodynamic energy future", conversation with Kelsey Chen', "TALK", ["talk"]],
@@ -55,36 +55,36 @@ var D = [
   ["25.10.11|Los Angeles",     '<b>SV Studios</b>, "New Syntax", curated by Alice Scope', "EXHIBITION", ["exhibition"], "25.10.11_SV Studios.jpg"],
   ["25.10.3–26.2.1|Warsaw",    '<a href="https://u-jazdowski.pl/en/programme/exhibitions/if-then"><b>Ujazdowski Castle Center for Contemporary Art</b>, "If/then", curated by Sara Szostak, Marta Grytczuk</a>', "EXHIBITION", ["exhibition"], "25.10.3_Ujazdowski.jpg"],
   ["25.10",                    '<a href="https://www.britishcouncil.org/research-insight/arts-and-technologies-china"><b>British Council</b>, "China Art and Technology Report"</a>', "PRESS", ["press"], "25.10_British Council.png"],
-  ["25.10",                    '<a href="https://mp.weixin.qq.com/s/KYRMpUNSQL713dZtU6lMBw"><b>Numero Magazine (China)</b>, "会见空腔"</a>', "INTERVIEW", ["interview"]],
-  ["25.10",                    '<a href="https://berggruen.org/library/proxima-kosmos-volume-2"><b>Berggruen Press</b>, "Science in the Unhomely Clouds", in <i>Proxima Kósmos: Volume II</i>, ed. Claire Webb</a>', "PUBLICATION", ["publication"]],
+  ["25.10",                    '<a href="https://mp.weixin.qq.com/s/KYRMpUNSQL713dZtU6lMBw"><b>Numero Magazine (China)</b>, "会见空腔"</a>', "INTERVIEW", ["interview"], "25.10_Numero.jpg"],
+  ["25.10",                    '<a href="https://berggruen.org/library/proxima-kosmos-volume-2"><b>Berggruen Press</b>, "Science in the Unhomely Clouds", in <i>Proxima Kósmos: Volume II</i>, ed. Claire Webb</a>', "PUBLICATION", ["publication"], "25.10_Berggruen Press_Proxima Kosmos.jpg"],
   ["25.10–11|France",          '<b>Château du Feÿ</b>, Glitch art/tech residency', "RESIDENCY", ["residency"]],
   ["25.9.12–26.1.4|Berlin",    '<a href="https://stiftung-stmatthaeus.de/ausstellungen/lichtan-lichtaus/"><b>Stiftung St. Matthäus</b>, "Lights Off Lights On", curated by Anna-Catharina Gebbers</a>', "EXHIBITION", ["exhibition"]],
   ["25.9.12|Berlin",           '<b>Hamburger Bahnhof</b>, "Videoart at Midnight," Berlin Art Week Garten', "SCREENING", ["exhibition"]],
   ["25.9.11–10.31|Shanghai",   '<b>BAM</b>, "Cosmic Arclight", curated by Iris Long', "EXHIBITION", ["exhibition"]],
   ["25.9.5|Spain",             '<a href="https://soloaiaward.com/">SOLO AI Award, Finalist, Onkaos</a>', "AWARD", ["residency"]],
   ["25.9.3–7|Linz, Austria",   '<a href="https://ars.electronica.art/panic/en/view/artists-perspective-23038ddb450c80e7a1a0e59cda51d5dc/"><b>Ars Electronica Festival</b>, Artist talk at the Expanded Conference, VH Award Presentation, Deep Space</a>', "EXHIBITION<br>TALK", ["exhibition","talk"], "25.9.3_Ars Electronica.jpg"],
-  ["25.9",                     '<a href="https://www.monopol-magazin.de/wendi-yan-verschiedene-versionen-der-realitaet"><b>Monopol Magazine</b>, "Watchlist", written by Elke Buhr</a>', "INTERVIEW", ["interview"]],
+  ["25.9",                     '<a href="https://www.monopol-magazin.de/wendi-yan-verschiedene-versionen-der-realitaet"><b>Monopol Magazine</b>, "Watchlist", written by Elke Buhr</a>', "INTERVIEW", ["interview"], "25.9_Monopol.jpeg"],
   ["25.8.23|San Francisco",    '"Visions of Phosphine Earth", Slash', "EXHIBITION", ["exhibition"]],
-  ["25.8.6",                   '<a href="https://ars.electronica.art/aeblog/en/2025/08/06/the-6th-vh-award-a-dream-that-wanders-as-if-it-were-real/"><b>Ars Electronica Blog</b>, Son Hyerim, "The 6th VH Award: A Dream That Wanders as If It Were Real"</a>', "INTERVIEW", ["interview"]],
+  ["25.8.6",                   '<a href="https://ars.electronica.art/aeblog/en/2025/08/06/the-6th-vh-award-a-dream-that-wanders-as-if-it-were-real/"><b>Ars Electronica Blog</b>, Son Hyerim, "The 6th VH Award: A Dream That Wanders as If It Were Real"</a>', "INTERVIEW", ["interview"], "25.8.6_Ars Electronica.jpg"],
   ["25.8.1|Idyllwild CA",      '"Visions of Phosphine Earth", FWB Fest, with Berggruen Institute', "EXHIBITION", ["exhibition"]],
   ["25.8|New York",            '<a href="https://www.newinc.org/members"><b>NEW INC</b>, Y12 Extended Realities Track</a>', "RESIDENCY", ["residency"]],
   ["25.7.24|Beijing",          '<b>VH AWARD Salon</b>, Speculative Worldbuilding with AI, conversation with Robin Mallick, Beichen Yang and Ziyang Wu, Hyundai Motorstudio', "TALK", ["talk"]],
-  ["25.7.16",                  '<a href="https://mp.weixin.qq.com/s/sDBtWj2yWVAmLdLee4FpOA"><b>艺术商业</b>, "《胡桃宫梦志》：当我们在思考&#x2018;假如&#x2019;的时候，我们究竟在思考什么？"</a>', "INTERVIEW", ["interview"]],
+  ["25.7.16",                  '<a href="https://mp.weixin.qq.com/s/sDBtWj2yWVAmLdLee4FpOA"><b>艺术商业</b>, "《胡桃宫梦志》：当我们在思考&#x2018;假如&#x2019;的时候，我们究竟在思考什么？"</a>', "INTERVIEW", ["interview"], "25.7.16_Art&Business.png"],
   ["25.7.12",                  '<a href="https://www.sursuma.com/magazine/wendi-yan"><b>Sursuma Magazine</b>, "Wendi Yan"</a>', "INTERVIEW", ["interview"]],
   ["25.7.11",                  '<a href="https://mp.weixin.qq.com/s/x0GajegDsM7AY68qLqvJMA"><b>新周刊</b>, "这些创作者，并不惧怕AI的到来"</a>', "INTERVIEW", ["interview"]],
-  ["25.7.9",                   '<a href="https://futurerelics.berggruen.org/daoist-alchemy"><b>Berggruen Institute</b>, "Daoist Diagram for Carbon Alchemy", in <i>Future Wunderkammer</i>, ed. Claire Webb</a>', "COMMISSION<br>WRITING ✦", ["exhibition","publication"]],
+  ["25.7.9",                   '<a href="https://futurerelics.berggruen.org/daoist-alchemy"><b>Berggruen Institute</b>, "Daoist Diagram for Carbon Alchemy", in <i>Future Wunderkammer</i>, ed. Claire Webb</a>', "COMMISSION<br>WRITING ✦", ["exhibition","publication"], "25.7.9_Berggruen Institute_Daoist Alchemy.png"],
   ["25.7.9",                   '<a href="https://mp.weixin.qq.com/s/Uw-lW3vDbosYPJ57Z1od-Q"><b>Artisle 艺术岛屿</b>, "VH AWARD —— 新媒体艺术的悖论与可能"</a>', "INTERVIEW", ["interview"]],
-  ["25.7.2",                   '<a href="https://mp.weixin.qq.com/s/bXCfkiTY7CWhFmoB2zA9KQ"><b>Meta Eye</b>, "颜文笛 | 当一位道士改写现代科学"</a>', "INTERVIEW", ["interview"]],
+  ["25.7.2",                   '<a href="https://mp.weixin.qq.com/s/bXCfkiTY7CWhFmoB2zA9KQ"><b>Meta Eye</b>, "颜文笛 | 当一位道士改写现代科学"</a>', "INTERVIEW", ["interview"], "25.7.2_Meta Eye.png"],
   ["25.6.29",                  '<b>Xiamen University</b>, Guest artist talk, "Bodies of Water" by Giulia Colletti', "TALK", ["talk"]],
-  ["25.6.25",                  '<a href="https://www.spikeartmagazine.com/articles/sixth-vh-award-hek-basel"><b>Spike Art Magazine</b>, "The 6th VH Award at HEK"</a>', "PRESS", ["press"]],
-  ["25.6.20",                  '<a href="https://ocula.com/magazine/art-news/the-art-world-this-week-20-june-2025/"><b>Ocula</b>, "The Art World This Week: 20 June 2025"</a>', "PRESS", ["press"]],
-  ["25.6.19",                  '<a href="https://reader.futureartecosystems.org/briefing/fae5/05-artist"><b>Serpentine</b>, Future Art Ecosystems 5: Art x Creative R&D, Contributor</a>', "EDITORIAL", ["interview"]],
-  ["25.6.18",                  '<a href="https://www.artasiapacific.com/shows/the-vh-award-announces-grand-prix-recipient-and-exhibitions-of-the-6th-vh-award/"><b>ArtAsiaPacific</b>, "The VH Award Announced Grand Prix Recipient and Exhibitions of the 6th VH Award"</a>', "PRESS", ["press"]],
-  ["25.6.18",                  '<a href="https://www.e-flux.com/announcements/659673/sixth-vh-award-grand-prix-recipient-and-exhibitions/"><b>e-flux</b>, "Sixth VH AWARD Grand Prix recipient and exhibitions"</a>', "PRESS", ["press"]],
+  ["25.6.25",                  '<a href="https://www.spikeartmagazine.com/articles/sixth-vh-award-hek-basel"><b>Spike Art Magazine</b>, "The 6th VH Award at HEK"</a>', "PRESS", ["press"], "25.6.25_Spike.png"],
+  ["25.6.20",                  '<a href="https://ocula.com/magazine/art-news/the-art-world-this-week-20-june-2025/"><b>Ocula</b>, "The Art World This Week: 20 June 2025"</a>', "PRESS", ["press"], "25.6.20_Ocula.png"],
+  ["25.6.19",                  '<a href="https://reader.futureartecosystems.org/briefing/fae5/05-artist"><b>Serpentine</b>, Future Art Ecosystems 5: Art x Creative R&D, Contributor</a>', "EDITORIAL", ["interview"], "25.6.19_Serpentine.jpg"],
+  ["25.6.18",                  '<a href="https://www.artasiapacific.com/shows/the-vh-award-announces-grand-prix-recipient-and-exhibitions-of-the-6th-vh-award/"><b>ArtAsiaPacific</b>, "The VH Award Announced Grand Prix Recipient and Exhibitions of the 6th VH Award"</a>', "PRESS", ["press"], "25.6.18_ArtAsiaPacific.png"],
+  ["25.6.18",                  '<a href="https://www.e-flux.com/announcements/659673/sixth-vh-award-grand-prix-recipient-and-exhibitions/"><b>e-flux</b>, "Sixth VH AWARD Grand Prix recipient and exhibitions"</a>', "PRESS", ["press"], "25.6.18_E-Flux.png"],
   ["25.6.18",                  '<b>Hyundai Motor Group, The Sixth VH Award, Grand Prix</b>, Press: <a href="https://www.e-flux.com/announcements/659673/sixth-vh-award-grand-prix-recipient-and-exhibitions/">e-flux</a>, <a href="https://www.artasiapacific.com/shows/the-vh-award-announces-grand-prix-recipient-and-exhibitions-of-the-6th-vh-award/">ArtAsiaPacific</a>, <a href="https://www.monopol-magazin.de/vh-award-2025-geht-wendi-yan-fuer-dream-walnut-palaces">Monopol</a>, <a href="https://www.spikeartmagazine.com/articles/sixth-vh-award-hek-basel">Spike</a>', "AWARD<br>PRESS", ["residency","press"], "25.6.18_Vision Hall.jpg"],
   ["25.6.16–8.31|Beijing",     '<a href="https://motorstudio.hyundai.com.cn/english/list-45.html"><b>Hyundai Motorstudio</b>, The 6th VH Award Exhibition</a>', "EXHIBITION", ["exhibition"], "25.6.18_Hyundai Motorstudio.jpg"],
   ["25.6.16–22|Basel",         '<a href="https://hek.ch/programm/ausstellungen/6th-vh-award"><b>House of Electronic Arts (HEK)</b>, The 6th VH Award</a>', "EXHIBITION", ["exhibition"], "25.6.16_HEK.jpeg"],
-  ["25.6.6",                   '<a href="https://artlab.hyundai.com/editorial/q-and-a-with-dawn-chan-and-the-6th-vh-award-finalists-technological-mythmaking-part-1"><b>Hyundai Artlab</b>, "Q&A with Dawn Chan and the 6th VH AWARD Finalists: Technological Mythmaking", written by Dawn Chan</a>', "INTERVIEW", ["interview"]],
+  ["25.6.6",                   '<a href="https://artlab.hyundai.com/editorial/q-and-a-with-dawn-chan-and-the-6th-vh-award-finalists-technological-mythmaking-part-1"><b>Hyundai Artlab</b>, "Q&A with Dawn Chan and the 6th VH AWARD Finalists: Technological Mythmaking", written by Dawn Chan</a>', "INTERVIEW", ["interview"], "25.6.6_Hyundai Artlab.png"],
   ["25.6.6|New York",          '<b><a href="https://www.demofestival.org/">NEW INC DEMO 2025</a></b>, conversation with Darren Zhu', "TALK", ["talk"], "25.6.6 NEW INC DEMO.jpg"],
   ["25.6",                     '<b>South Park Commons</b>, Member Residency', "RESIDENCY", ["residency"]],
   ["25.5.4|New York",          '<a href="https://rhizome.org/events/survival-strategies/"><b>Rhizome World</b>, Survival Strategies: The Dao of Planetary Breath, conversation with Yunuen Rhi, Banyi Huang and Zandie Brockett</a>', "TALK", ["talk"]],
@@ -97,11 +97,11 @@ var D = [
   ["25.3.9|Austin",            '<b>SeedAI House at SXSW</b>, "Bio-Digital Play", conversation with Will Freudenheim', "TALK", ["talk"], "25.3.9_SeedAI.jpeg"],
   ["25.3.2|Los Angeles",       '<b>Now Instant Image Hall</b>, "Kevin Peter He, Wendi Yan, Alice Bucknell: Cinematic Engine"', "EXHIBITION", ["exhibition"]],
   ["25.2.8",                   '<b>M+ Museum and Design Trust</b>, Design in Rising Winds, research atlas by Flora Weil', "EXHIBITION", ["exhibition"]],
-  ["25.2.3|New York",          '<a href="https://apossible.com/interviews/wendi-yan-is-an-artist"><b>APOSSIBLE</b>, "Wendi Yan, Artist"</a>', "INTERVIEW", ["interview"]],
-  ["25.1.20",                  '<a href="https://history.princeton.edu/undergraduate/alumni-journeys/wendi-yan-23"><b>Princeton History Department</b>, Alum interview</a>', "INTERVIEW", ["interview"]],
+  ["25.2.3|New York",          '<a href="https://apossible.com/interviews/wendi-yan-is-an-artist"><b>APOSSIBLE</b>, "Wendi Yan, Artist"</a>', "INTERVIEW", ["interview"], "25.2.3_Apossible.png"],
+  ["25.1.20",                  '<a href="https://history.princeton.edu/undergraduate/alumni-journeys/wendi-yan-23"><b>Princeton History Department</b>, Alum interview</a>', "INTERVIEW", ["interview"], "25.1.20_Princeton.png"],
   ["25|Shanghai",              '<b>BAM</b>, Cosmic Arclight Residency', "RESIDENCY", ["residency"]],
   ["24.12.31|Shanghai",        '<b>TANK Art Center</b>, "GAME OM"', "EXHIBITION", ["exhibition"]],
-  ["24.11.15",                 '<a href="https://caldo-worldwide.com/collections/books/products/interplay-will-freudenheim-william-morgan"><b>Caldo Worldwide</b>, Essay on Biotopy, in <i>Interplay</i></a>', "PUBLICATION", ["publication"]],
+  ["24.11.15",                 '<a href="https://caldo-worldwide.com/collections/books/products/interplay-will-freudenheim-william-morgan"><b>Caldo Worldwide</b>, Essay on Biotopy, in <i>Interplay</i></a>', "PUBLICATION", ["publication"], "24.11.14_Caldo Worldwide.png"],
   ["24.11.2|Beijing (virtual)",'<a href="https://mp.weixin.qq.com/s/sTZgw613TbX-s_8Cyat_6A"><b>Assembly 拆东西研究所</b>, "Labour, Choices, and Intention: AI & Art Through Two Texts", conversation with Yilun Li, Ziyang Wu, Gary Zhexi Zhang, Tinghao Zhou and Iris Long</a>', "TALK", ["talk"]],
   ["24.10.26|New York",        '<b>NEW INC Creative Science Dinner #4: Rewilding</b>, Biotopy (game)', "EXHIBITION", ["exhibition"]],
   ["24.10.25|New York",        '<b>HEART 442 Broadway</b>, Lavender Town', "EXHIBITION", ["exhibition"]],
@@ -115,16 +115,16 @@ var D = [
   ["24.5.28",                  '<a href="https://www.instagram.com/p/C7RMvg9oIOt/"><b>Trust</b>, "Mammoth Technology: Worlding R&D Aesthetics"</a>', "TALK", ["talk"]],
   ["24.5|San Francisco",       '<a href="https://cosmos-institute.org/"><b>Cosmos Ventures</b>, Prototypes for the Philosophy of Technology Grant</a>', "GRANT", ["residency"]],
   ["24.5",                     '<b>Ethereum Foundation</b>, Summer of Protocols', "GRANT", ["residency"]],
-  ["24.4.9",                   '<a href="https://press.asimov.com/articles/antimalarial-drug"><b>Asimov Press</b>, "Discovering an Antimalarial Drug in Mao\'s China"</a>', "PUBLICATION", ["publication"]],
-  ["24.3.28",                  '<a href="https://wetransfer.com/blog/story/wetransfer-launches-networked-worlds-memo/"><b>WeTransfer and Co-Matter</b>, "Networked Worlds: Research Memo"</a>', "WRITING<br>EDITORIAL", ["publication","interview"]],
+  ["24.4.9",                   '<a href="https://press.asimon.com/articles/antimalarial-drug"><b>Asimov Press</b>, "Discovering an Antimalarial Drug in Mao\'s China"</a>', "PUBLICATION", ["publication"], "24.4.9_Asimov Press.png"],
+  ["24.3.28",                  '<a href="https://wetransfer.com/blog/story/wetransfer-launches-networked-worlds-memo/"><b>WeTransfer and Co-Matter</b>, "Networked Worlds: Research Memo"</a>', "WRITING<br>EDITORIAL", ["publication","interview"], "24.3.28_WeTransfer and Co-Matter.png"],
   ["24.3.22|Cambridge",        '<b>Harvard University</b>, Unfiguring: Experiments in Art and Science', "TALK", ["talk"]],
   ["24.3.15|Los Angeles",      '<b>Last Projects</b>, "Dear Beings"', "EXHIBITION", ["exhibition"]],
   ["24–25|New York",           '<a href="https://www.newinc.org/members"><b>NEW INC</b>, Y11 Creative Science Track</a>', "RESIDENCY", ["residency"]],
   ["23.11.4|Beijing (virtual)",'<a href="https://xvirtual.org/"><b>X Virtual</b>, "A Mammoth Gathering", X Museum</a>', "TALK", ["talk"]],
   ["23|Brooklyn NY",           '<b>Interact Symposium</b>, "Mammoths and the Post-Anthropocene"', "TALK", ["talk"]],
   ["23|online",                '<b>Stanford HAI Generative AI Working Group</b>, "Beyond Imitation: Alien Worldbuilding with AI"', "TALK", ["talk"]],
-  ["23.9.18",                  '<a href="https://www.wallpaper.com/tech/the-steve-jobs-archive-announces-the-first-recipients-of-its-creative-fellowship"><b>Wallpaper</b>, "The Steve Jobs Archive announces the first recipients of its creative fellowship"</a>', "PRESS", ["press"]],
-  ["23.7",                     '<a href="https://www.coeval-magazine.com/coeval/wendi-yan"><b>Coeval Magazine</b>, "Wendi Yan", written by Oscar Salguero</a>', "INTERVIEW", ["interview"]],
+  ["23.9.18",                  '<a href="https://www.wallpaper.com/tech/the-steve-jobs-archive-announces-the-first-recipients-of-its-creative-fellowship"><b>Wallpaper</b>, "The Steve Jobs Archive announces the first recipients of its creative fellowship"</a>', "PRESS", ["press"], "23.9.18_Wallpaper.png"],
+  ["23.7",                     '<a href="https://www.coeval-magazine.com/coeval/wendi-yan"><b>Coeval Magazine</b>, "Wendi Yan", written by Oscar Salguero</a>', "INTERVIEW", ["interview"], "23.7_Coeval.png"],
   ["23.5|Princeton NJ",        '<a href="https://vimeo.com/829835865"><b>Lewis Center for the Arts, Princeton University</b>, "A Tiny Museum of Mammoth Technologies"</a>', "SOLO EXHIBITION ✦<br>EDITORIAL", ["exhibition","interview"], "23.5_Lewis Center for the Arts.png"],
   ["23.5.1|Princeton NJ",      '<b>Friend Center for Engineering Education, Princeton University</b>, "Art of Science"', "EXHIBITION", ["exhibition"]],
   ["22.7–8|New York",          '<b>Interact Residency</b>', "RESIDENCY", ["residency"]],
@@ -233,6 +233,7 @@ function initTable() {
       '  height: auto;',
       '  max-height: 180px;',
       '  object-fit: cover;',
+      '  transition: opacity 0.15s ease-in-out;',
       '}',
       '@media screen and (max-width: 768px), (hover: none) {',
       '  .wy-hover-preview {',
@@ -391,12 +392,31 @@ function initTable() {
       previewTimeout = null;
     }
     
-    previewImg.src = imageBase + tr.dataset.img;
+    var newSrc = imageBase + tr.dataset.img;
+    previewImg.dataset.targetSrc = newSrc;
+    
+    // Avoid showing old image while new image loads
+    if (previewImg.getAttribute('src') !== newSrc) {
+      previewImg.style.opacity = '0';
+      previewImg.onload = function() {
+        if (previewImg.dataset.targetSrc === newSrc) {
+          previewImg.style.opacity = '1';
+        }
+      };
+      previewImg.src = newSrc;
+    } else if (previewImg.complete) {
+      previewImg.style.opacity = '1';
+    } else {
+      previewImg.style.opacity = '0';
+      previewImg.onload = function() {
+        if (previewImg.dataset.targetSrc === newSrc) {
+          previewImg.style.opacity = '1';
+        }
+      };
+    }
+    
     previewEl.style.display = 'block';
-    
-    // Force layout reflow to make sure transition starts smoothly
     void previewEl.offsetWidth;
-    
     previewEl.classList.add('active');
   });
 
@@ -413,6 +433,13 @@ function initTable() {
       if (previewTimeout) clearTimeout(previewTimeout);
       previewTimeout = setTimeout(function() {
         previewEl.style.display = 'none';
+        
+        // Hide and reset target image when fully closed
+        var previewImg = document.getElementById('wy-hover-preview-img');
+        if (previewImg) {
+          previewImg.style.opacity = '0';
+          previewImg.dataset.targetSrc = '';
+        }
       }, 200);
     }
   });
