@@ -1,7 +1,7 @@
 (function(){
 
 var HIGHLIGHTS = [
-  "26.7.17|Eindhoven","26.6.23","26.6.18|New York","26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
+  "26.7.17|Eindhoven","26.7.9","26.6.23","26.6.18|New York","26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
   "26.3.16","26.3.21|Singapore","26.3|New York","26.2.28","26.2.19",
   "26.1.20|Singapore","26.1.9|Shanghai","25.12–26.1|New York","25.11|Buenos Aires",
   "25.10","25.10–11|France","25.10.28","25.10.3–26.2.1|Warsaw",
@@ -18,6 +18,7 @@ var HIGHLIGHTS = [
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 var D = [
   ["26.7.17|Eindhoven",        '<a href="https://mu.nl/event/opening-night-metabolising-time"><b>MU Hybrid Art House</b>, "Rhythms Beyond Linearity"</a>', "EXHIBITION", ["exhibition"], "26.7.17_MU Hybrid Art House.png"],
+  ["26.7.9",                   '<a href="https://www.koozarch.com/interviews/m-design-trust-research-fellowship-with-flora-weil-and-wendi-yan"><b>KoozArch</b>, "M+ / Design Trust Research Fellowship: Thinking in Parallel with Flora Weil and Wendi Yan"</a>', "INTERVIEW", ["interview"], "26.7.9_KoozArch.png"],
   ["26.6.23",                  '<a href="https://analogue.press/p/the-revival-funds-inaugural-cohort"><b>The Revival Fund</b>, Announcing our inaugural cohort of grantees </a>',"INITIATIVE", ["initiatives"], "26.6.23_Revival Fund.png"],
   ["26.6.18|New York",         '<b>Office of Applied Strategy</b>, Practical Aesthetic Service, Panel with Sarah Hromack-Chan, Justin Morris-Marano, and Xandra Beverlin', "TALK", ["talk"], "26.6.18_Office of Applied Strategy.jpg"],
   ["26.6.12|New York",         '<a href="https://www.biodesignchallenge.org/summit-2026"><b>Biodesign Summit</b>, MoMA</a>', "TALK", ["talk"]],
@@ -232,8 +233,6 @@ function initTable() {
       '  display: block;',
       '  width: 100%;',
       '  height: auto;',
-      '  max-height: 180px;',
-      '  object-fit: cover;',
       '  transition: opacity 0.15s ease-in-out;',
       '}',
       '@media screen and (max-width: 768px), (hover: none) {',
