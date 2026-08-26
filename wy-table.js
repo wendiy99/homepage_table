@@ -18,7 +18,7 @@ var HIGHLIGHTS = [
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 var D = [
   ["26.8.29–11.1|New York",    '<a href="https://www.harvestworks.org/event/in-other-forms/"><b>Harvestworks</b>, "In Other Forms"</a>', "EXHIBITION", ["exhibition"], "26.8.29_Harvestworks.jpg"],
-  ["26.7.17|Eindhoven",        '<a href="https://mu.nl/event/opening-night-metabolising-time"><b>MU Hybrid Art House</b>, "Rhythms Beyond Linearity"</a>', "EXHIBITION", ["exhibition"], "26.7.17_MU Hybrid Art House.png"],
+  ["26.7.17-9.20|Eindhoven",        '<a href="https://mu.nl/event/opening-night-metabolising-time"><b>MU Hybrid Art House</b>, "Rhythms Beyond Linearity"</a>', "EXHIBITION", ["exhibition"], "26.7.17_MU Hybrid Art House.png"],
   ["26.7.9",                   '<a href="https://www.koozarch.com/interviews/m-design-trust-research-fellowship-with-flora-weil-and-wendi-yan"><b>KoozArch</b>, "M+ / Design Trust Research Fellowship: Thinking in Parallel with Flora Weil and Wendi Yan"</a>', "INTERVIEW", ["interview"], "26.7.9_KoozArch.png"],
   ["26.6.23",                  '<a href="https://analogue.press/p/the-revival-funds-inaugural-cohort"><b>The Revival Fund</b>, Announcing our inaugural cohort of grantees </a>',"INITIATIVE", ["initiatives"], "26.6.23_Revival Fund.png"],
   ["26.6.18|New York",         '<b>Office of Applied Strategy</b>, Practical Aesthetic Service, Panel with Sarah Hromack-Chan, Justin Morris-Marano, and Xandra Beverlin', "TALK", ["talk"], "26.6.18_Office of Applied Strategy.jpg"],
