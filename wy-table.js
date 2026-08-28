@@ -1,11 +1,11 @@
 (function(){
 
 var HIGHLIGHTS = [
-  "26.8.29–11.1|New York","26.7.17|Eindhoven","26.7.9","26.6.23","26.6.18|New York","26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
-  "26.3.16","26.3.21|Singapore","26.3|New York","26.2.28","26.2.19",
+  "26.8.29–11.1|New York","26.7.17-9.20|Eindhoven","26.7.9","26.6.23","26.6.18|New York","26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
+  "26.3.16","26.3.21-8.16|Singapore","26.3|New York","26.2.28","26.2.19",
   "26.1.20|Singapore","26.1.9|Shanghai","25.12–26.1|New York","25.11|Buenos Aires",
   "25.10","25.10–11|France","25.10.30","25.10.28","25.10.3–26.2.1|Warsaw",
-  "25.9.12–26.1.4|Germany","25.8|New York","25.8.6","25.7.24|Beijing",
+  "25.9.12–26.1.4|Berlin","25.8|New York","25.8.6","25.7.24|Beijing",
   "25.7.16","25.7.2","25.6.19","25.6.18","25.6.16–8.31|Beijing",
   "25.6.16–22|Basel","25.6.6|New York","25.5.3–8.23|San Francisco",
   "25.3.11","25.2.3|New York","25.1.20","24.9.14|San Francisco",
