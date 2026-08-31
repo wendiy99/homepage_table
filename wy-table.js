@@ -1,7 +1,7 @@
 (function(){
 
 var HIGHLIGHTS = [
-  "26.10.2–11.22|Turku","26.8.29–11.1|New York","26.7.17-9.20|Eindhoven","26.7.9","26.6.23","26.6.18|New York","26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
+  "26.10.2–11.22|Turku","26.9.18–27.1.17|London","26.8.29–11.1|New York","26.7.17-9.20|Eindhoven","26.7.9","26.6.23","26.6.18|New York","26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
   "26.3.16","26.3.21-8.16|Singapore","26.3|New York","26.2.28","26.2.19",
   "26.1.20|Singapore","26.1.9|Shanghai","25.12–26.1|New York","25.11|Buenos Aires",
   "25.10","25.10–11|France","25.10.30","25.10.28","25.10.3–26.2.1|Warsaw",
@@ -18,6 +18,7 @@ var HIGHLIGHTS = [
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 var D = [
   ["26.10.2–11.22|Turku",       '<a href="https://turuntaidemuseo.fi/en/nayttelyt/wendi-yan"><b>Turku Art Museum</b>, "Dream of Walnut Palaces" (Solo Presentation)</a>', "SOLO EXHIBITION ✦", ["exhibition"], "26.10.2_Turku Art Museum.jpg"],
+  ["26.9.18–27.1.17|London",    '<a href="https://www.arebyte.com/slipstream"><b>arebyte</b>, "Slipstream"</a>', "EXHIBITION", ["exhibition"], "26.9.18_arebyte.png"],
   ["26.8.29–11.1|New York",    '<a href="https://www.harvestworks.org/event/in-other-forms/"><b>Harvestworks</b>, "In Other Forms"</a>', "EXHIBITION", ["exhibition"], "26.8.29_Harvestworks.jpg"],
   ["26.7.17-9.20|Eindhoven",        '<a href="https://mu.nl/event/opening-night-metabolising-time"><b>MU Hybrid Art House</b>, "Rhythms Beyond Linearity"</a>', "EXHIBITION", ["exhibition"], "26.7.17_MU Hybrid Art House.png"],
   ["26.7.9",                   '<a href="https://www.koozarch.com/interviews/m-design-trust-research-fellowship-with-flora-weil-and-wendi-yan"><b>KoozArch</b>, "M+ / Design Trust Research Fellowship: Thinking in Parallel with Flora Weil and Wendi Yan"</a>', "INTERVIEW", ["interview"], "26.7.9_KoozArch.png"],
