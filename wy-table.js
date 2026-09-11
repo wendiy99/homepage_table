@@ -156,122 +156,180 @@ function filterRows(f) {
   });
 }
 
+// Detect where the script is hosted to support both local testing and production absolute URL
+var scriptSrc = document.currentScript ? document.currentScript.src : '';
+var imageBase = 'https://wendiy99.github.io/homepage_table/images/';
+if (scriptSrc) {
+  var lastSlash = scriptSrc.lastIndexOf('/');
+  if (lastSlash > -1) {
+    imageBase = scriptSrc.substring(0, lastSlash) + '/images/';
+  }
+}
+
 function initTable() {
   var table  = document.querySelector('.wy-table');
   var tabsEl = document.getElementById('wy-tabs');
   if (!table || !tabsEl) {
-    document.addEventListener('DOMContentLoaded', initTable, { once: true });
     return;
   }
 
-  // Detect where the script is hosted to support both local testing and production absolute URL
-  var scriptSrc = document.currentScript ? document.currentScript.src : '';
-  var imageBase = 'https://wendiy99.github.io/homepage_table/images/';
-  if (scriptSrc) {
-    var lastSlash = scriptSrc.lastIndexOf('/');
-    if (lastSlash > -1) {
-      imageBase = scriptSrc.substring(0, lastSlash) + '/images/';
-    }
+  // If already populated and structured, do not re-run
+  if (table.querySelector('tbody') && tabsEl.querySelector('.wy-tabs-row')) {
+    return;
   }
 
-  // Inject styles for the hover preview container if not already present
+  // Inject styles for tabs, table, and hover preview if not already present
   if (!document.getElementById('wy-table-injected-style')) {
     var style = document.createElement('style');
     style.id = 'wy-table-injected-style';
     style.textContent = [
-      '.wy-hover-preview {',
-      '  position: fixed;',
-      '  pointer-events: none;',
-      '  z-index: 10000;',
-      '  opacity: 0;',
-      '  transform: translate(15px, -50%) scale(0.95);',
-      '  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);',
-      '  box-shadow: 0 10px 30px rgba(0,0,0,0.12);',
-      '  border-radius: 0px;',
-      '  overflow: hidden;',
-      '  background: #ffffff;',
-      '  border: 1px solid rgba(0,0,0,0.08);',
-      '  width: 240px;',
-      '  height: auto;',
-      '  display: none;',
-      '}',
-      'html body [id="T3057851291"] .wy-table td.wy-type {',
-      '  white-space: nowrap !important;',
-      '}',
-      'html body [id="T3057851291"] .wy-table .c-date {',
-      '  width: 135px !important;',
-      '}',
-      'html body [id="T3057851291"] .wy-table td.wy-date {',
-      '  width: 135px !important;',
-      '  min-width: 135px !important;',
-      '}',
-      'html body [id="T3057851291"] .wy-table .c-type {',
-      '  width: 110px !important;',
-      '}',
-      'html body [id="T3057851291"] .wy-table td.wy-type {',
-      '  width: 110px !important;',
-      '  min-width: 110px !important;',
-      '}',
-      'html body [id="T3057851291"] .wy-tabs {',
+      '.wy-tabs {',
       '  display: flex !important;',
       '  flex-direction: column !important;',
       '  gap: 0.5rem !important;',
       '  border-bottom: 1px solid #e8e8e8 !important;',
       '  padding: 0.6rem 0 0.7rem !important;',
       '  background: #ffffff !important;',
+      '  margin: 0 !important;',
+      '  flex-shrink: 0 !important;',
       '}',
-      'html body [id="T3057851291"] .wy-tabs-row {',
+      '.wy-tabs-row {',
       '  display: flex !important;',
       '  gap: 0.35rem !important;',
       '  flex-wrap: wrap !important;',
       '}',
-      'html body [id="T3057851291"] .wy-tab {',
-      '  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;',
+      '.wy-tab {',
       '  font-size: 0.65em !important;',
+      '  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;',
+      '  letter-spacing: 0.09em !important;',
+      '  text-transform: uppercase !important;',
+      '  font-weight: 400 !important;',
+      '  border-radius: 2rem !important;',
       '  padding: 4px 8px !important;',
+      '  margin: 0 !important;',
+      '  cursor: pointer !important;',
+      '  line-height: 1 !important;',
+      '  box-shadow: none !important;',
+      '  background: transparent !important;',
+      '  border: 1px solid #ddd !important;',
+      '  color: #aaa !important;',
       '  flex-shrink: 0 !important;',
+      '  transition: all 0.15s ease !important;',
+      '}',
+      '.wy-tab:hover, .wy-tab.active {',
+      '  background: #111 !important;',
+      '  border-color: #111 !important;',
+      '  color: #f5f5f5 !important;',
+      '}',
+      '.wy-tab[data-f="initiatives"] {',
+      '  border-radius: 0px !important;',
+      '}',
+      '.wy-tab[data-f="initiatives"]:hover {',
+      '  background: transparent !important;',
+      '  border: 1px solid #111 !important;',
+      '  color: #111 !important;',
+      '}',
+      '.wy-tab[data-f="initiatives"].active {',
+      '  background: #111 !important;',
+      '  border: 1px solid #111 !important;',
+      '  color: #f5f5f5 !important;',
+      '}',
+      '.wy-table {',
+      '  width: 100% !important;',
+      '  min-width: 100% !important;',
+      '  border-collapse: collapse !important;',
+      '  table-layout: fixed !important;',
+      '  margin-top: 10px !important;',
+      '}',
+      '.wy-table .c-date { width: 135px !important; }',
+      '.wy-table .c-type { width: 110px !important; }',
+      '.wy-table tr {',
+      '  position: relative !important;',
+      '  overflow: hidden !important;',
+      '  border-top: 1px solid #eee !important;',
+      '  background: transparent !important;',
+      '}',
+      '.wy-table tr.hidden { display: none !important; }',
+      '.wy-table tr:hover { background: #111 !important; }',
+      '.wy-table tr:hover td, .wy-table tr:hover td span, .wy-table tr:hover td a, .wy-table tr:hover td a span { color: #f5f5f5 !important; }',
+      '.wy-table tr:hover .wy-date span, .wy-table tr:hover .wy-type span { color: rgba(255,255,255,0.45) !important; }',
+      '.wy-table tr:hover b, .wy-table tr:hover strong {',
+      '  letter-spacing: 0.015em !important;',
+      '  text-shadow: 0 0 8px rgba(255,255,255,0.3), 0 0 2px rgba(255,255,255,0.5) !important;',
+      '}',
+      '.wy-table td {',
+      '  padding: 6px 6px 6px 0 !important;',
+      '  vertical-align: top !important;',
+      '  overflow: hidden !important;',
+      '  box-sizing: border-box !important;',
+      '}',
+      '.wy-date { color: #aaa !important; padding-top: 7px !important; }',
+      '.wy-table td.wy-date {',
+      '  width: 135px !important;',
+      '  min-width: 135px !important;',
+      '}',
+      '.wy-table td.wy-date span, .wy-table td.wy-date span span {',
+      '  font-size: 0.62em !important;',
+      '  text-transform: uppercase !important;',
+      '  letter-spacing: 0.05em !important;',
+      '  white-space: nowrap !important;',
+      '}',
+      '.wy-desc { color: #111 !important; line-height: 1.35 !important; padding-top: 6px !important; }',
+      '.wy-desc a { color: inherit !important; text-decoration: none !important; border-bottom: 1px solid transparent !important; transition: border-color 0.2s !important; }',
+      '.wy-desc a:hover { border-bottom-color: currentColor !important; }',
+      '.wy-type { text-align: right !important; color: #bbb !important; padding-top: 7px !important; white-space: nowrap !important; }',
+      '.wy-table td.wy-type {',
+      '  width: 110px !important;',
+      '  min-width: 110px !important;',
+      '}',
+      '.wy-table td.wy-type span { font-size: 0.62em !important; white-space: nowrap !important; }',
+      '.wy-solo-marker {',
+      '  color: #e65100 !important;',
+      '  margin-left: 2px !important;',
+      '  font-weight: bold !important;',
+      '  display: inline-block !important;',
+      '}',
+      '.wy-table tr:hover .wy-solo-marker {',
+      '  color: #ffcc80 !important;',
+      '}',
+      '.wy-hover-preview {',
+      '  position: fixed !important;',
+      '  pointer-events: none !important;',
+      '  z-index: 10000 !important;',
+      '  opacity: 0 !important;',
+      '  transform: translate(15px, -50%) scale(0.95) !important;',
+      '  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;',
+      '  box-shadow: 0 10px 30px rgba(0,0,0,0.12) !important;',
+      '  border-radius: 0px !important;',
+      '  overflow: hidden !important;',
+      '  background: #ffffff !important;',
+      '  border: 1px solid rgba(0,0,0,0.08) !important;',
+      '  width: 240px !important;',
+      '  height: auto !important;',
+      '  display: none !important;',
       '}',
       '.wy-hover-preview.active {',
-      '  opacity: 1;',
-      '  transform: translate(15px, -50%) scale(1);',
+      '  opacity: 1 !important;',
+      '  transform: translate(15px, -50%) scale(1) !important;',
       '}',
       '.wy-hover-preview img {',
-      '  display: block;',
-      '  width: 100%;',
-      '  height: auto;',
-      '  transition: opacity 0.15s ease-in-out;',
+      '  display: block !important;',
+      '  width: 100% !important;',
+      '  height: auto !important;',
+      '  transition: opacity 0.15s ease-in-out !important;',
       '}',
       '@media screen and (max-width: 768px), (hover: none) {',
-      '  .wy-hover-preview {',
-      '    display: none !important;',
-      '  }',
+      '  .wy-hover-preview { display: none !important; }',
       '}',
       '@media screen and (max-width: 768px) {',
-      '  html body [id="T3057851291"] .wy-table .c-date {',
-      '    width: 80px !important;',
-      '  }',
-      '  html body [id="T3057851291"] .wy-table td.wy-date {',
-      '    width: 80px !important;',
-      '    min-width: 80px !important;',
-      '  }',
-      '  html body [id="T3057851291"] .wy-table td.wy-date span,',
-      '  html body [id="T3057851291"] .wy-table td.wy-date span span {',
-      '    font-size: 0.58em !important;',
-      '  }',
-      '  html body [id="T3057851291"] .wy-table .c-type {',
-      '    width: 70px !important;',
-      '  }',
-      '  html body [id="T3057851291"] .wy-table td.wy-type {',
-      '    width: 70px !important;',
-      '    min-width: 70px !important;',
-      '  }',
-      '  html body [id="T3057851291"] .wy-table td.wy-type span {',
-      '    font-size: 0.58em !important;',
-      '  }',
-      '  html body [id="T3057851291"] .wy-table td {',
-      '    padding: 5px 4px 5px 0 !important;',
-      '  }',
-      '}'
+      '  .wy-table .c-date { width: 80px !important; }',
+      '  .wy-table td.wy-date { width: 80px !important; min-width: 80px !important; }',
+      '  .wy-table td.wy-date span, .wy-table td.wy-date span span { font-size: 0.58em !important; }',
+      '  .wy-table .c-type { width: 70px !important; }',
+      '  .wy-table td.wy-type { width: 70px !important; min-width: 70px !important; }',
+      '  .wy-table td.wy-type span { font-size: 0.58em !important; }',
+      '  .wy-table td { padding: 5px 4px 5px 0 !important; }',
+      '}',
     ].join('\n');
     document.head.appendChild(style);
   }
@@ -290,7 +348,26 @@ function initTable() {
     document.body.appendChild(previewEl);
   }
 
-  if (!tabsEl.querySelector('[data-f="initiatives"]')) {
+  var defaultTabs = [
+    { f: 'highlight', label: 'Selected', active: true },
+    { f: 'all', label: 'All' },
+    { f: 'exhibition', label: 'Exhibitions' },
+    { f: 'talk', label: 'Talks' },
+    { f: 'publication', label: 'Publications' },
+    { f: 'editorial', label: 'Editorial' },
+    { f: 'residency', label: 'Residencies' },
+    { f: 'initiatives', label: 'Initiatives' }
+  ];
+
+  if (!tabsEl.querySelector('.wy-tab')) {
+    defaultTabs.forEach(function(t) {
+      var btn = document.createElement('button');
+      btn.className = 'wy-tab' + (t.active ? ' active' : '');
+      btn.dataset.f = t.f;
+      btn.textContent = t.label;
+      tabsEl.appendChild(btn);
+    });
+  } else if (!tabsEl.querySelector('[data-f="initiatives"]')) {
     var initBtn = document.createElement('button');
     initBtn.className = 'wy-tab';
     initBtn.dataset.f = 'initiatives';
@@ -491,6 +568,32 @@ function initTable() {
   };
 }
 
-initTable();
+// Initial trigger
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTable);
+} else {
+  initTable();
+}
+
+// Support Cargo SPA page transitions, history events, and editor clicks
+document.addEventListener('cargo:page:ready', initTable);
+document.addEventListener('cargo:pagination', initTable);
+window.addEventListener('popstate', initTable);
+window.addEventListener('hashchange', initTable);
+
+// MutationObserver to auto-repopulate if Cargo replaces DOM elements dynamically
+if (typeof window !== 'undefined' && window.MutationObserver) {
+  var observer = new MutationObserver(function() {
+    var table = document.querySelector('.wy-table');
+    var tabsEl = document.getElementById('wy-tabs');
+    if (table && tabsEl && (!table.querySelector('tbody') || !tabsEl.querySelector('.wy-tabs-row'))) {
+      initTable();
+    }
+  });
+  observer.observe(document.documentElement || document.body, {
+    childList: true,
+    subtree: true
+  });
+}
 
 })();
