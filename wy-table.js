@@ -290,7 +290,26 @@ function initTable() {
     document.body.appendChild(previewEl);
   }
 
-  if (!tabsEl.querySelector('[data-f="initiatives"]')) {
+  var defaultTabs = [
+    { f: 'highlight', label: 'Selected', active: true },
+    { f: 'all', label: 'All' },
+    { f: 'exhibition', label: 'Exhibitions' },
+    { f: 'talk', label: 'Talks' },
+    { f: 'publication', label: 'Publications' },
+    { f: 'editorial', label: 'Editorial' },
+    { f: 'residency', label: 'Residencies' },
+    { f: 'initiatives', label: 'Initiatives' }
+  ];
+
+  if (!tabsEl.querySelector('.wy-tab')) {
+    defaultTabs.forEach(function(t) {
+      var btn = document.createElement('button');
+      btn.className = 'wy-tab' + (t.active ? ' active' : '');
+      btn.dataset.f = t.f;
+      btn.textContent = t.label;
+      tabsEl.appendChild(btn);
+    });
+  } else if (!tabsEl.querySelector('[data-f="initiatives"]')) {
     var initBtn = document.createElement('button');
     initBtn.className = 'wy-tab';
     initBtn.dataset.f = 'initiatives';
