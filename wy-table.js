@@ -180,9 +180,9 @@ function initTable() {
     style.id = 'wy-table-injected-style';
     style.textContent = [
       '.wy-hover-preview {',
-      '  position: fixed;',
-      '  pointer-events: none;',
-      '  z-index: 10000;',
+      '  position: fixed !important;',
+      '  pointer-events: none !important;',
+      '  z-index: 999999 !important;',
       '  opacity: 0;',
       '  transform: translate(15px, -50%) scale(0.95);',
       '  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);',
@@ -241,7 +241,7 @@ function initTable() {
       '  height: auto;',
       '  transition: opacity 0.15s ease-in-out;',
       '}',
-      '@media screen and (max-width: 768px), (hover: none) {',
+      '@media screen and (max-width: 768px) {',
       '  .wy-hover-preview {',
       '    display: none !important;',
       '  }',
@@ -398,27 +398,38 @@ function initTable() {
       previewTimeout = null;
     }
     
-    var newSrc = imageBase + tr.dataset.img;
+    var newSrc = encodeURI(imageBase + tr.dataset.img);
     previewImg.dataset.targetSrc = newSrc;
     
-    // Avoid showing old image while new image loads
-    if (previewImg.getAttribute('src') !== newSrc) {
-      previewImg.style.opacity = '0';
-      previewImg.onload = function() {
-        if (previewImg.dataset.targetSrc === newSrc) {
-          previewImg.style.opacity = '1';
-        }
-      };
-      previewImg.src = newSrc;
-    } else if (previewImg.complete) {
+    // Position immediately on mouseover
+    var x = e.clientX;
+    var y = e.clientY;
+    var width = previewEl.offsetWidth || 240;
+    var height = previewEl.offsetHeight || 150;
+    var posX = x + 15;
+    var posY = y - height / 2;
+    if (posX + width > window.innerWidth) posX = x - width - 15;
+    if (posY < 10) posY = 10;
+    else if (posY + height > window.innerHeight) posY = window.innerHeight - height - 10;
+    previewEl.style.left = posX + 'px';
+    previewEl.style.top = posY + 'px';
+
+    previewImg.onload = function() {
+      if (previewImg.dataset.targetSrc === newSrc) {
+        previewImg.style.opacity = '1';
+      }
+    };
+    previewImg.onerror = function() {
+      if (previewImg.src !== imageBase + tr.dataset.img) {
+        previewImg.src = imageBase + tr.dataset.img;
+      }
+    };
+
+    if (previewImg.getAttribute('src') === newSrc && previewImg.complete) {
       previewImg.style.opacity = '1';
     } else {
       previewImg.style.opacity = '0';
-      previewImg.onload = function() {
-        if (previewImg.dataset.targetSrc === newSrc) {
-          previewImg.style.opacity = '1';
-        }
-      };
+      previewImg.src = newSrc;
     }
     
     previewEl.style.display = 'block';
