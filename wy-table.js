@@ -195,41 +195,77 @@ function initTable() {
       '  height: auto;',
       '  display: none;',
       '}',
-      'html body [id="T3057851291"] .wy-table td.wy-type {',
-      '  white-space: nowrap !important;',
-      '}',
-      'html body [id="T3057851291"] .wy-table .c-date {',
-      '  width: 135px !important;',
-      '}',
-      'html body [id="T3057851291"] .wy-table td.wy-date {',
-      '  width: 135px !important;',
-      '  min-width: 135px !important;',
-      '}',
-      'html body [id="T3057851291"] .wy-table .c-type {',
-      '  width: 110px !important;',
-      '}',
-      'html body [id="T3057851291"] .wy-table td.wy-type {',
-      '  width: 110px !important;',
-      '  min-width: 110px !important;',
-      '}',
-      'html body [id="T3057851291"] .wy-tabs {',
+      '.wy-tabs {',
       '  display: flex !important;',
       '  flex-direction: column !important;',
       '  gap: 0.5rem !important;',
       '  border-bottom: 1px solid #e8e8e8 !important;',
       '  padding: 0.6rem 0 0.7rem !important;',
       '  background: #ffffff !important;',
+      '  margin: 0 !important;',
+      '  width: 100% !important;',
+      '  box-sizing: border-box !important;',
       '}',
-      'html body [id="T3057851291"] .wy-tabs-row {',
+      '.wy-tabs-row {',
       '  display: flex !important;',
       '  gap: 0.35rem !important;',
       '  flex-wrap: wrap !important;',
+      '  width: 100% !important;',
       '}',
-      'html body [id="T3057851291"] .wy-tab {',
-      '  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;',
+      '.wy-tab {',
       '  font-size: 0.65em !important;',
+      '  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;',
+      '  letter-spacing: 0.09em !important;',
+      '  text-transform: uppercase !important;',
+      '  font-weight: 400 !important;',
+      '  border-radius: 2rem !important;',
       '  padding: 4px 8px !important;',
+      '  margin: 0 !important;',
+      '  cursor: pointer !important;',
+      '  line-height: 1 !important;',
+      '  box-shadow: none !important;',
+      '  background: transparent !important;',
+      '  border: 1px solid #ddd !important;',
+      '  color: #aaa !important;',
       '  flex-shrink: 0 !important;',
+      '  display: inline-block !important;',
+      '  visibility: visible !important;',
+      '  opacity: 1 !important;',
+      '}',
+      '.wy-tab:hover, .wy-tab.active {',
+      '  background: #111 !important;',
+      '  border-color: #111 !important;',
+      '  color: #f5f5f5 !important;',
+      '}',
+      '.wy-tab[data-f="initiatives"] {',
+      '  border-radius: 0px !important;',
+      '}',
+      '.wy-tab[data-f="initiatives"]:hover {',
+      '  background: transparent !important;',
+      '  border: 1px solid #111 !important;',
+      '  color: #111 !important;',
+      '}',
+      '.wy-tab[data-f="initiatives"].active {',
+      '  background: #111 !important;',
+      '  border: 1px solid #111 !important;',
+      '  color: #f5f5f5 !important;',
+      '}',
+      '.wy-table td.wy-type {',
+      '  white-space: nowrap !important;',
+      '}',
+      '.wy-table .c-date {',
+      '  width: 135px !important;',
+      '}',
+      '.wy-table td.wy-date {',
+      '  width: 135px !important;',
+      '  min-width: 135px !important;',
+      '}',
+      '.wy-table .c-type {',
+      '  width: 110px !important;',
+      '}',
+      '.wy-table td.wy-type {',
+      '  width: 110px !important;',
+      '  min-width: 110px !important;',
       '}',
       '.wy-hover-preview.active {',
       '  opacity: 1;',
@@ -247,10 +283,10 @@ function initTable() {
       '  }',
       '}',
       '@media screen and (max-width: 768px) {',
-      '  html body [id="T3057851291"] .wy-table .c-date {',
+      '  .wy-table .c-date {',
       '    width: 80px !important;',
       '  }',
-      '  html body [id="T3057851291"] .wy-table td.wy-date {',
+      '  .wy-table td.wy-date {',
       '    width: 80px !important;',
       '    min-width: 80px !important;',
       '  }',
@@ -258,17 +294,17 @@ function initTable() {
       '  html body [id="T3057851291"] .wy-table td.wy-date span span {',
       '    font-size: 0.58em !important;',
       '  }',
-      '  html body [id="T3057851291"] .wy-table .c-type {',
+      '  .wy-table .c-type {',
       '    width: 70px !important;',
       '  }',
-      '  html body [id="T3057851291"] .wy-table td.wy-type {',
+      '  .wy-table td.wy-type {',
       '    width: 70px !important;',
       '    min-width: 70px !important;',
       '  }',
       '  html body [id="T3057851291"] .wy-table td.wy-type span {',
       '    font-size: 0.58em !important;',
       '  }',
-      '  html body [id="T3057851291"] .wy-table td {',
+      '  .wy-table td {',
       '    padding: 5px 4px 5px 0 !important;',
       '  }',
       '}'
@@ -290,57 +326,43 @@ function initTable() {
     document.body.appendChild(previewEl);
   }
 
-  var defaultTabs = [
+  // Directly construct both rows of tabs
+  tabsEl.innerHTML = '';
+
+  var row1 = document.createElement('div');
+  row1.className = 'wy-tabs-row wy-tabs-row-1';
+  [
     { f: 'highlight', label: 'Selected', active: true },
-    { f: 'all', label: 'All' },
+    { f: 'all', label: 'All' }
+  ].forEach(function(t) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'wy-tab' + (t.active ? ' active' : '');
+    btn.dataset.f = t.f;
+    btn.textContent = t.label;
+    row1.appendChild(btn);
+  });
+
+  var row2 = document.createElement('div');
+  row2.className = 'wy-tabs-row wy-tabs-row-2';
+  [
     { f: 'exhibition', label: 'Exhibitions' },
     { f: 'talk', label: 'Talks' },
     { f: 'publication', label: 'Publications' },
     { f: 'editorial', label: 'Editorial' },
     { f: 'residency', label: 'Residencies' },
     { f: 'initiatives', label: 'Initiatives' }
-  ];
+  ].forEach(function(t) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'wy-tab';
+    btn.dataset.f = t.f;
+    btn.textContent = t.label;
+    row2.appendChild(btn);
+  });
 
-  if (!tabsEl.querySelector('.wy-tab')) {
-    defaultTabs.forEach(function(t) {
-      var btn = document.createElement('button');
-      btn.className = 'wy-tab' + (t.active ? ' active' : '');
-      btn.dataset.f = t.f;
-      btn.textContent = t.label;
-      tabsEl.appendChild(btn);
-    });
-  } else if (!tabsEl.querySelector('[data-f="initiatives"]')) {
-    var initBtn = document.createElement('button');
-    initBtn.className = 'wy-tab';
-    initBtn.dataset.f = 'initiatives';
-    initBtn.textContent = 'Initiatives';
-    tabsEl.appendChild(initBtn);
-  }
-
-  // Split tabs into two rows: Row 1 (Selected & All), Row 2 (Categories)
-  if (!tabsEl.querySelector('.wy-tabs-row')) {
-    var row1 = document.createElement('div');
-    row1.className = 'wy-tabs-row wy-tabs-row-1';
-    var row2 = document.createElement('div');
-    row2.className = 'wy-tabs-row wy-tabs-row-2';
-    
-    var btnHighlight = tabsEl.querySelector('[data-f="highlight"]');
-    var btnAll = tabsEl.querySelector('[data-f="all"]');
-    
-    if (btnHighlight) row1.appendChild(btnHighlight);
-    if (btnAll) row1.appendChild(btnAll);
-    
-    var remainingBtns = Array.from(tabsEl.querySelectorAll('.wy-tab'));
-    remainingBtns.forEach(function(btn) {
-      if (btn !== btnHighlight && btn !== btnAll) {
-        row2.appendChild(btn);
-      }
-    });
-    
-    tabsEl.innerHTML = '';
-    tabsEl.appendChild(row1);
-    tabsEl.appendChild(row2);
-  }
+  tabsEl.appendChild(row1);
+  tabsEl.appendChild(row2);
 
   document.querySelectorAll('.wy-tab').forEach(function(btn) {
     btn.removeAttribute('style');
