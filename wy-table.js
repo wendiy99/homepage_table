@@ -355,6 +355,13 @@ function initTable() {
     return;
   }
 
+  // Auto-repair: If #wy-scroll is mistakenly placed inside #wy-header, move it out
+  var scrollEl = document.getElementById('wy-scroll');
+  var headerEl = document.getElementById('wy-header');
+  if (headerEl && scrollEl && headerEl.contains(scrollEl)) {
+    headerEl.parentNode.insertBefore(scrollEl, headerEl.nextSibling);
+  }
+
   // Detect where the script is hosted to support both local testing and production absolute URL
   var scriptSrc = document.currentScript ? document.currentScript.src : '';
   var imageBase = 'https://wendiy99.github.io/homepage_table/images/';
