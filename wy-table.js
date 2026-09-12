@@ -164,6 +164,16 @@ function initTable() {
     return;
   }
 
+  // Prevent modifying DOM inside Cargo's live visual editor,
+  // preventing Cargo from serializing the generated <tr> rows into the page source code.
+  if (table.isContentEditable || 
+      (table.closest && table.closest('[contenteditable="true"]')) ||
+      (document.querySelector && document.querySelector('.content_container[contenteditable="true"]')) ||
+      (window.location && window.location.pathname && window.location.pathname.indexOf('/admin') > -1) ||
+      (document.body && (document.body.classList.contains('in-editor') || document.body.classList.contains('cargo-editor')))) {
+    return;
+  }
+
   // Detect where the script is hosted to support both local testing and production absolute URL
   var scriptSrc = document.currentScript ? document.currentScript.src : '';
   var imageBase = 'https://wendiy99.github.io/homepage_table/images/';
