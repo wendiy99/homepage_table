@@ -18,6 +18,7 @@ var HIGHLIGHTS = [
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 var D = [
   ["26.10.2–11.22|Turku",       '<a href="https://turuntaidemuseo.fi/en/nayttelyt/wendi-yan"><b>Turku Art Museum</b>, "Dream of Walnut Palaces" (Solo Presentation)</a>', "SOLO EXHIBITION ✦", ["exhibition"], "26.10.2_Turku Art Museum.jpg"],
+  ["26.9.25–10.17|San Francisco", '<a href="https://www.tiat.place/exhibitions"><b>TIAT</b>, "Chinamaxxing"</a>', "EXHIBITION", ["exhibition"]],
   ["26.9.18–27.1.17|London",    '<a href="https://www.arebyte.com/slipstream"><b>arebyte</b>, "Slipstream"</a>', "EXHIBITION", ["exhibition"], "26.9.18_arebyte.png"],
   ["26.9.9–13|Linz",           '<a href="https://ars.electronica.art/negotiatinghumanity/en/view/ghost-stories-negotiating-between-worlds-39938ddb450c8079978eee12b2bd374e/"><b>Ars Electronica Festival</b>, "Ghost Stories: Negotiating Between Worlds"</a>', "SCREENING", ["exhibition"], "26.9.9_Ars Electronica.jpg"],
   ["26.9.1",                   '<a href="https://www.volkskrant.nl/tentoonstellingen/een-mammoet-moet-in-wendi-yans-animatiefilm-de-wereld-redden-maar-daar-heeft-zij-helemaal-geen-zin-in~bc67a756d/"><b>de Volkskrant</b>, "Een mammoet moet in Wendi Yans animatiefilm de wereld redden, maar daar heeft zij helemaal geen zin in"</a>', "PRESS", ["press"], "26.9.1_de Volkskrant.jpg"],
