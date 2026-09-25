@@ -17,6 +17,7 @@ var HIGHLIGHTS = [
 // Format: ["YY.M.D|City", '<description HTML>', "TYPE", ["category"]]
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 var D = [
+  ["26.10.7|New York",          '<a href="https://powerhousearts.org/event/from-oil-paints-to-virtual-reality-innovation-is-the-medium"><b>Powerhouse Arts</b>, "From Oil Paints to Virtual Reality: Innovation is the Medium", Panel with Jazia Hammoudi and Ruby Thelot, moderated by Rubén Polendo</a>', "TALK", ["talk"], "26.10.7_Powerhouse Arts.avif"],
   ["26.10.2–11.22|Turku",       '<a href="https://turuntaidemuseo.fi/en/nayttelyt/wendi-yan"><b>Turku Art Museum</b>, "Dream of Walnut Palaces" (Solo Presentation)</a>', "SOLO EXHIBITION ✦", ["exhibition"], "26.10.2_Turku Art Museum.jpg"],
   ["26.9.25–10.17|San Francisco", '<a href="https://www.tiat.place/exhibitions"><b>TIAT</b>, "Chinamaxxing"</a>', "EXHIBITION", ["exhibition"]],
   ["26.9.18–27.1.17|London",    '<a href="https://www.arebyte.com/slipstream"><b>arebyte</b>, "Slipstream"</a>', "EXHIBITION", ["exhibition"], "26.9.18_arebyte.png"],
