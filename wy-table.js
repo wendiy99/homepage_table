@@ -528,8 +528,8 @@ function initTable() {
   var row1 = document.createElement('div');
   row1.className = 'wy-tabs-row wy-tabs-row-1';
   [
-    { f: 'highlight', label: 'Selected', active: true },
-    { f: 'all', label: 'All' }
+    { f: 'highlight', label: 'Selected' },
+    { f: 'all', label: 'All', active: true }
   ].forEach(function(t) {
     var btn = document.createElement('button');
     btn.type = 'button';
