@@ -227,10 +227,13 @@
     .wy-table .wy-date,
     [id="T3057851291"] .wy-date { color: #aaa !important; padding-top: 7px; font-size: 11px !important; }
     .wy-table td.wy-date,
+    .wy-table td.wy-date *,
     .wy-table td.wy-date span,
     .wy-table td.wy-date span span,
-    [id="T3057851291"] .wy-table td.wy-date span,
-    [id="T3057851291"] .wy-table td.wy-date span span { 
+    html body [id] .wy-table td.wy-date,
+    html body [id] .wy-table td.wy-date *,
+    html body [id] .wy-table td.wy-date span,
+    html body [id] .wy-table td.wy-date span span { 
         font-size: 11px !important; 
         text-transform: uppercase !important; 
         letter-spacing: 0.05em !important; 
@@ -239,25 +242,43 @@
     }
 
     .wy-table .wy-desc,
+    .wy-table .wy-desc *,
     .wy-table .wy-desc .bodycopy-2,
-    [id="T3057851291"] .wy-desc,
-    [id="T3057851291"] .wy-desc .bodycopy-2 {
+    .wy-table td.wy-desc,
+    .wy-table td.wy-desc *,
+    html body [id] .wy-table td.wy-desc,
+    html body [id] .wy-table td.wy-desc *,
+    html body [id] .wy-table .wy-desc,
+    html body [id] .wy-table .wy-desc * {
         color: #111 !important;
         font-size: 14px !important;
         font-weight: 400 !important;
         line-height: 1.35 !important;
+    }
+    .wy-table td.wy-desc,
+    .wy-table .wy-desc {
         padding-top: 6px !important;
     }
-    .wy-table .wy-desc .bodycopy-2,
-    [id="T3057851291"] .wy-desc .bodycopy-2 {
+    .wy-table td.wy-desc b,
+    .wy-table td.wy-desc strong,
+    .wy-table td.wy-desc a b,
+    .wy-table td.wy-desc a strong,
+    html body [id] .wy-table td.wy-desc b,
+    html body [id] .wy-table td.wy-desc strong,
+    html body [id] .wy-table td.wy-desc a b,
+    html body [id] .wy-table td.wy-desc a strong {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+    }
+    .wy-table .wy-desc .bodycopy-2 {
         display: inline !important;
     }
     .wy-table .wy-desc a,
     .wy-table .wy-desc a:link,
     .wy-table .wy-desc a:visited,
-    [id="T3057851291"] .wy-desc a,
-    [id="T3057851291"] .wy-desc a:link,
-    [id="T3057851291"] .wy-desc a:visited {
+    .wy-table .bodycopy-2 a,
+    .wy-table .bodycopy-2 a:link,
+    .wy-table .bodycopy-2 a:visited {
         color: #111 !important;
         text-decoration: none !important;
         border-bottom: 1px solid transparent !important;
@@ -267,10 +288,13 @@
     .wy-table .wy-type,
     [id="T3057851291"] .wy-type { text-align: right !important; color: #bbb !important; padding-top: 7px !important; white-space: nowrap !important; font-size: 11px !important; }
     .wy-table td.wy-type,
+    .wy-table td.wy-type *,
     .wy-table td.wy-type span,
     .wy-table td.wy-type span span,
-    [id="T3057851291"] .wy-table td.wy-type span,
-    [id="T3057851291"] .wy-table td.wy-type span span { font-size: 11px !important; white-space: nowrap !important; color: #bbb; }
+    html body [id] .wy-table td.wy-type,
+    html body [id] .wy-table td.wy-type *,
+    html body [id] .wy-table td.wy-type span,
+    html body [id] .wy-table td.wy-type span span { font-size: 11px !important; white-space: nowrap !important; color: #bbb; }
 
     .wy-table .wy-solo-marker,
     [id="T3057851291"] .wy-solo-marker {
@@ -297,8 +321,15 @@
     }
     .wy-table tr[data-hi="1"] .wy-desc,
     .wy-table tr[data-hi="1"] .wy-desc .bodycopy-2,
-    [id="T3057851291"] .wy-table tr[data-hi="1"] .wy-desc {
+    html body [id] .wy-table tr[data-hi="1"] td.wy-desc,
+    html body [id] .wy-table tr[data-hi="1"] td.wy-desc * {
         font-weight: 400 !important;
+    }
+    .wy-table tr[data-hi="1"] td.wy-desc b,
+    .wy-table tr[data-hi="1"] td.wy-desc strong,
+    html body [id] .wy-table tr[data-hi="1"] td.wy-desc b,
+    html body [id] .wy-table tr[data-hi="1"] td.wy-desc strong {
+        font-weight: 600 !important;
     }
 
     .wy-table tr.wy-grand-prix td,
@@ -318,10 +349,13 @@
             min-width: 80px !important;
         }
         .wy-table td.wy-date,
+        .wy-table td.wy-date *,
         .wy-table td.wy-date span,
         .wy-table td.wy-date span span,
-        [id="T3057851291"] .wy-table td.wy-date span,
-        [id="T3057851291"] .wy-table td.wy-date span span {
+        html body [id] .wy-table td.wy-date,
+        html body [id] .wy-table td.wy-date *,
+        html body [id] .wy-table td.wy-date span,
+        html body [id] .wy-table td.wy-date span span {
             font-size: 10px !important;
         }
         .wy-table .c-type,
@@ -334,17 +368,36 @@
             min-width: 70px !important;
         }
         .wy-table td.wy-type,
+        .wy-table td.wy-type *,
         .wy-table td.wy-type span,
         .wy-table td.wy-type span span,
-        [id="T3057851291"] .wy-table td.wy-type span,
-        [id="T3057851291"] .wy-table td.wy-type span span {
+        html body [id] .wy-table td.wy-type,
+        html body [id] .wy-table td.wy-type *,
+        html body [id] .wy-table td.wy-type span,
+        html body [id] .wy-table td.wy-type span span {
             font-size: 10px !important;
         }
         .wy-table .wy-desc,
+        .wy-table .wy-desc *,
         .wy-table .wy-desc .bodycopy-2,
-        [id="T3057851291"] .wy-desc,
-        [id="T3057851291"] .wy-desc .bodycopy-2 {
+        .wy-table td.wy-desc,
+        .wy-table td.wy-desc *,
+        html body [id] .wy-table td.wy-desc,
+        html body [id] .wy-table td.wy-desc *,
+        html body [id] .wy-table .wy-desc,
+        html body [id] .wy-table .wy-desc * {
             font-size: 13px !important;
+        }
+        .wy-table td.wy-desc b,
+        .wy-table td.wy-desc strong,
+        .wy-table td.wy-desc a b,
+        .wy-table td.wy-desc a strong,
+        html body [id] .wy-table td.wy-desc b,
+        html body [id] .wy-table td.wy-desc strong,
+        html body [id] .wy-table td.wy-desc a b,
+        html body [id] .wy-table td.wy-desc a strong {
+            font-size: 13px !important;
+            font-weight: 600 !important;
         }
         .wy-table td,
         [id="T3057851291"] .wy-table td {
