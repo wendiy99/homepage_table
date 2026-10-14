@@ -340,27 +340,25 @@
 <body>
 
   <div id="T3057851291">
-    <column-unit slot="0">
+    <column-unit slot="0" style="position: sticky; top: 0; height: 100vh; max-height: 100vh; display: flex; flex-direction: column; overflow: hidden; padding-bottom: 2rem;">
       
-      <!-- Tab filters -->
-      <div id="wy-tabs" class="wy-tabs">
-        <button class="wy-tab active" data-f="all">All</button>
-        <button class="wy-tab" data-f="highlight">Selected</button>
-        <button class="wy-tab" data-f="exhibition">Exhibitions</button>
-        <button class="wy-tab" data-f="talk">Talks</button>
-        <button class="wy-tab" data-f="publication">Publications</button>
-        <button class="wy-tab" data-f="editorial">Editorial</button>
-        <button class="wy-tab" data-f="residency">Residencies</button>
+      <div id="wy-header" style="flex-shrink: 0;">
+        Wendi Yan is an artist, writer and technologist. She uses CGI software to simulate alternative scientific progress through videos and games, and writes about the history and future of scientific discovery.&nbsp;<br><br>
+        Wendi was an inaugural <a href="https://stevejobsarchive.com/fellowship" target="_blank">Steve Jobs Archive Fellow</a> and the Grand Prix recipient of the <a href="https://vhaward.com/" target="_blank">6th VH Award</a> by Hyundai Motor Group. She directs <a href="https://therevivalfund.com/" target="_blank">the Revival Fund</a>, an experimental grant program restoring lost research.<br><br>
+        <!-- Tab filters -->
+        <div id="wy-tabs" class="wy-tabs"></div>
       </div>
 
       <!-- Activity Table -->
-      <table class="wy-table">
-        <colgroup>
-          <col class="c-date">
-          <col>
-          <col class="c-type">
-        </colgroup>
-      </table>
+      <div id="wy-scroll" style="flex: 1 1 auto; overflow-y: auto; overflow-x: hidden; min-height: 0;">
+        <table class="wy-table">
+          <colgroup>
+            <col class="c-date">
+            <col>
+            <col class="c-type">
+          </colgroup>
+        </table>
+      </div>
 
     </column-unit>
   </div>

@@ -1,7 +1,7 @@
 (function(){
 
 var HIGHLIGHTS = [
-  "26.10.20–12.19|Paris","26.10.7|New York", "26.10.2–11.22|Turku","26.9.18–27.1.17|London","26.8.29–11.1|New York","26.7.17-9.20|Eindhoven","26.7.9","26.6.23","26.6.18|New York","26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
+  "26.10.20–12.19|Paris","26.10.12","26.10.7|New York", "26.10.2–11.22|Turku","26.9.18–27.1.17|London","26.8.29–11.1|New York","26.7.17-9.20|Eindhoven","26.7.9","26.6.23","26.6.18|New York","26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
   "26.3.16","26.3.21-8.16|Singapore","26.3|New York","26.2.28","26.2.19",
   "26.1.20|Singapore","26.1.9|Shanghai","25.12–26.1|New York","25.11|Buenos Aires",
   "25.10","25.10–11|France","25.10.30","25.10.28","25.10.3–26.2.1|Warsaw",
@@ -18,6 +18,7 @@ var HIGHLIGHTS = [
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 var D = [
   ["26.10.20–12.19|Paris",      '<a href="https://www.artverse.fr"><b>ArtVerse</b>, "To Make A World Out of Sediment and Sky" (Two-person show with Camilla Alberti)</a>', "EXHIBITION", ["exhibition"]],
+  ["26.10.12",                 '<a href="https://umbigo.space/en/post-digital/fantasmas_do_progresso_wendi_yan_sobre_erros_de_traducao_conhecimento_perdido_e_a_vida_pos-morte_da_ciencia-utieyp-6acca262dceec5b5f8291c35"><b>Umbigo Magazine</b>, "Ghosts of Progress: Wendi Yan on Mistranslation, Lost Knowledge and the Afterlives of Science", conversation with Alexander Burenkov</a>', "INTERVIEW", ["interview"], "26.10.12_Umbigo.jpg"],
   ["26.10.7|New York",          '<a href="https://powerhousearts.org/event/from-oil-paints-to-virtual-reality-innovation-is-the-medium"><b>Powerhouse Arts</b>, "From Oil Paints to Virtual Reality: Innovation is the Medium", Panel with Jazia Hammoudi and Ruby Thelot, moderated by Rubén Polendo</a>', "TALK", ["talk"], "26.10.7_Powerhouse Arts.avif"],
   ["26.10.2–11.22|Turku",       '<a href="https://turuntaidemuseo.fi/en/nayttelyt/wendi-yan"><b>Turku Art Museum</b>, "Dream of Walnut Palaces" (Solo Presentation)</a>', "SOLO EXHIBITION ✦", ["exhibition"], "26.10.2_Turku Art Museum.jpg"],
   ["26.9.25–10.17|San Francisco", '<a href="https://www.tiat.place/exhibitions"><b>TIAT</b>, "Chinamaxxing"</a>', "EXHIBITION", ["exhibition"]],
