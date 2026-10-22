@@ -17,7 +17,7 @@ var HIGHLIGHTS = [
 // Format: ["YY.M.D|City", '<description HTML>', "TYPE", ["category"]]
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 var D = [
-  ["26.11.19|Geneva",           '<a href="https://www.instagram.com/reel/DeuA7JENRja/"><b>Arts at CERN</b>, CERN Art & Science Summit: "The Hybrid Nexus"</a>', "TALK", ["talk"], "26.11.19_CERN.jpg"],
+  ["26.11.19|Geneva",           '<a href="https://indico.cern.ch/event/1702954/"><b>Arts at CERN</b>, CERN Art & Science Summit: "The Hybrid Nexus"</a>', "TALK", ["talk"], "26.11.19_CERN.jpg"],
   ["26.10.31–12.13|Beijing",    '<a href="https://www.galerieursmeile.com"><b>Galerie Urs Meile</b>, "Time Out of Joint"</a>', "EXHIBITION", ["exhibition"], "26.10.31_Urs Meile.jpg"],
   ["26.10.20–12.19|Paris",      '<a href="https://www.artverse.fr"><b>ArtVerse</b>, "To Make A World Out of Sediment and Sky" (Two-person show with Camilla Alberti)</a>', "SOLO EXHIBITION", ["exhibition"]],
   ["26.10.12",                 '<a href="https://umbigo.space/en/post-digital/fantasmas_do_progresso_wendi_yan_sobre_erros_de_traducao_conhecimento_perdido_e_a_vida_pos-morte_da_ciencia-utieyp-6acca262dceec5b5f8291c35"><b>Umbigo Magazine</b>, "Ghosts of Progress: Wendi Yan on Mistranslation, Lost Knowledge and the Afterlives of Science", conversation with Alexander Burenkov</a>', "INTERVIEW", ["interview"], "26.10.12_Umbigo.jpg"],
