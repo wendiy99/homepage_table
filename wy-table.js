@@ -563,7 +563,28 @@ function injectStyles() {
 
 injectStyles();
 
+var detectedScriptSrc = document.currentScript ? document.currentScript.src : '';
 function initTable() {
+  var hdr0 = document.getElementById('wy-header');
+  if (hdr0 && !document.getElementById('wy-tabs')) {
+    var t0 = document.createElement('div');
+    t0.id = 'wy-tabs';
+    t0.className = 'wy-tabs';
+    hdr0.appendChild(t0);
+  }
+  if (hdr0 && !document.querySelector('.wy-table')) {
+    var sc0 = document.getElementById('wy-scroll');
+    if (!sc0) {
+      sc0 = document.createElement('div');
+      sc0.id = 'wy-scroll';
+      sc0.style.cssText = 'flex: 1 1 auto; overflow-y: auto; overflow-x: hidden; min-height: 0;';
+      hdr0.parentNode.insertBefore(sc0, hdr0.nextSibling);
+    }
+    var tb0 = document.createElement('table');
+    tb0.className = 'wy-table';
+    tb0.innerHTML = '<colgroup><col class="c-date" /><col /><col class="c-type" /></colgroup>';
+    sc0.appendChild(tb0);
+  }
   injectStyles();
   var table  = document.querySelector('.wy-table');
   var tabsEl = document.getElementById('wy-tabs');
@@ -580,7 +601,7 @@ function initTable() {
   }
 
   // Detect where the script is hosted to support both local testing and production absolute URL
-  var scriptSrc = document.currentScript ? document.currentScript.src : '';
+  var scriptSrc = detectedScriptSrc || (document.currentScript ? document.currentScript.src : '');
   var imageBase = 'https://wendiy99.github.io/homepage_table/images/';
   if (scriptSrc) {
     var lastSlash = scriptSrc.lastIndexOf('/');
@@ -821,5 +842,15 @@ function initTable() {
 }
 
 initTable();
+if (typeof MutationObserver !== 'undefined') {
+  var wyObserver = new MutationObserver(function() {
+    var tbl = document.querySelector('.wy-table');
+    var hdr = document.getElementById('wy-header');
+    if ((tbl && !tbl.querySelector('tbody')) || (hdr && !tbl)) {
+      initTable();
+    }
+  });
+  wyObserver.observe(document.documentElement, { childList: true, subtree: true });
+}
 
 })();
