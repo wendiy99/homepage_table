@@ -17,7 +17,7 @@ var HIGHLIGHTS = [
 // Format: ["YY.M.D|City", '<description HTML>', "TYPE", ["category"]]
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 var D = [
-  ["26.12.2–6|Miami",            '<a href="https://untitledartfairs.com/"><b>Untitled Art Fair</b>, presented by ArtVerse + Bitforms</a>', "EXHIBITION", ["exhibition"]],
+  ["26.12.2–6|Miami",            '<a href="https://untitledartfairs.com/"><b>Untitled Art</b>, presented by ArtVerse + Bitforms</a>', "EXHIBITION", ["exhibition"]],
   ["26.11.19|Geneva",           '<a href="https://indico.cern.ch/event/1702954/"><b>Arts at CERN</b>, CERN Art & Science Summit: "The Hybrid Nexus"</a>', "TALK", ["talk"], "26.11.19_CERN.jpg"],
   ["26.11.14|London",           '<a href="https://www.arebyte.com/events/artist-talks-performance-slipstream"><b>arebyte</b>, "Digital Worlds, Alternative Futures: Skawennati, Wendi Yan and Kinnari Saraiya"</a>', "TALK", ["talk"], "26.11.14_arebyte.jpg"],
   ["26.10.31–12.13|Beijing",    '<a href="https://www.galerieursmeile.com"><b>Galerie Urs Meile</b>, "Time Out of Joint"</a>', "EXHIBITION", ["exhibition"], "26.10.31_Urs Meile.jpg"],
