@@ -1,7 +1,7 @@
 (function(){
 
 var HIGHLIGHTS = [
-  "26.11.19|Geneva","26.11.14|London","26.10.31–12.13|Beijing","26.10.20–12.19|Paris","26.10.12","26.10.7|New York", "26.10.2–11.22|Turku","26.9.18–27.1.17|London","26.8.29–11.1|New York","26.7.17-9.20|Eindhoven","26.7.9","26.6.23","26.6.18|New York","26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
+  "26.12.2–6|Miami","26.11.19|Geneva","26.11.14|London","26.10.31–12.13|Beijing","26.10.20–12.19|Paris","26.10.12","26.10.7|New York", "26.10.2–11.22|Turku","26.9.18–27.1.17|London","26.8.29–11.1|New York","26.7.17-9.20|Eindhoven","26.7.9","26.6.23","26.6.18|New York","26.6.12|New York","26.5.26","26.4.28|Geneva","26.4.20|San Francisco","26.3.17–29|Hong Kong",
   "26.3.16","26.3.21-8.16|Singapore","26.3|New York","26.2.28","26.2.19",
   "26.1.20|Singapore","26.1.9|Shanghai","25.12–26.1|New York","25.11|Buenos Aires",
   "25.10","25.10–11|France","25.10.30","25.10.28","25.10.3–26.2.1|Warsaw",
@@ -17,6 +17,7 @@ var HIGHLIGHTS = [
 // Format: ["YY.M.D|City", '<description HTML>', "TYPE", ["category"]]
 // Categories: "exhibition" "talk" "publication" "interview" "press" "residency" "initiatives"
 var D = [
+  ["26.12.2–6|Miami",            '<a href="https://untitledartfairs.com/"><b>Untitled Art Fair</b>, presented by ArtVerse + Bitforms</a>', "EXHIBITION", ["exhibition"]],
   ["26.11.19|Geneva",           '<a href="https://indico.cern.ch/event/1702954/"><b>Arts at CERN</b>, CERN Art & Science Summit: "The Hybrid Nexus"</a>', "TALK", ["talk"], "26.11.19_CERN.jpg"],
   ["26.11.14|London",           '<a href="https://www.arebyte.com/events/artist-talks-performance-slipstream"><b>arebyte</b>, "Digital Worlds, Alternative Futures: Skawennati, Wendi Yan and Kinnari Saraiya"</a>', "TALK", ["talk"], "26.11.14_arebyte.jpg"],
   ["26.10.31–12.13|Beijing",    '<a href="https://www.galerieursmeile.com"><b>Galerie Urs Meile</b>, "Time Out of Joint"</a>', "EXHIBITION", ["exhibition"], "26.10.31_Urs Meile.jpg"],
