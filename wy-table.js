@@ -992,8 +992,43 @@ function initTable() {
 var wyFoldState = {
   collapsed: false,
   savedRatio: null,
-  animTimer: null
+  animTimer: null,
+  resizeObserver: null
 };
+
+function syncLeftColMediaWidth(leftCol) {
+  if (!leftCol) return;
+  var w = leftCol.clientWidth || leftCol.getBoundingClientRect().width;
+  if (w > 0) {
+    leftCol.style.setProperty('--resize-parent-width', Math.floor(w) + 'px', 'important');
+    leftCol.style.setProperty('--column-width', Math.floor(w) + 'px', 'important');
+  }
+}
+
+function startLeftColResizeSync(leftCol) {
+  if (!leftCol) return;
+  syncLeftColMediaWidth(leftCol);
+  if (typeof ResizeObserver !== 'undefined') {
+    if (wyFoldState.resizeObserver) {
+      wyFoldState.resizeObserver.disconnect();
+    }
+    wyFoldState.resizeObserver = new ResizeObserver(function() {
+      syncLeftColMediaWidth(leftCol);
+    });
+    wyFoldState.resizeObserver.observe(leftCol);
+  }
+}
+
+function stopLeftColResizeSync(leftCol) {
+  if (wyFoldState.resizeObserver) {
+    wyFoldState.resizeObserver.disconnect();
+    wyFoldState.resizeObserver = null;
+  }
+  if (leftCol) {
+    leftCol.style.removeProperty('--resize-parent-width');
+    leftCol.style.removeProperty('--column-width');
+  }
+}
 
 function syncFoldButtonUI(btn, collapsed) {
   if (!btn) return;
@@ -1041,6 +1076,7 @@ function setRightColumnCollapsed(collapse) {
     var startWidth = currentRightWidth > 40 ? currentRightWidth : (colSetWidth * (wyFoldState.savedRatio || 0.41));
     colSet.style.setProperty('--wy-right-col-width', Math.round(startWidth) + 'px');
     colSet.classList.add('wy-fold-animating');
+    startLeftColResizeSync(leftCol);
     void colSet.offsetWidth;
     colSet.classList.add('wy-right-collapsed');
     wyFoldState.collapsed = true;
@@ -1053,6 +1089,7 @@ function setRightColumnCollapsed(collapse) {
 
     wyFoldState.animTimer = setTimeout(function() {
       colSet.classList.remove('wy-fold-animating');
+      syncLeftColMediaWidth(leftCol);
       window.dispatchEvent(new Event('resize'));
     }, 450);
   } else {
@@ -1066,6 +1103,7 @@ function setRightColumnCollapsed(collapse) {
     wyFoldState.animTimer = setTimeout(function() {
       colSet.classList.remove('wy-fold-animating');
       colSet.style.removeProperty('--wy-right-col-width');
+      stopLeftColResizeSync(leftCol);
       window.dispatchEvent(new Event('resize'));
     }, 450);
   }
@@ -1126,6 +1164,7 @@ function initFoldToggle() {
 
   if (wyFoldState.collapsed) {
     colSet.classList.add('wy-right-collapsed');
+    startLeftColResizeSync(leftCol);
   }
 }
 
@@ -1141,6 +1180,7 @@ if (typeof MutationObserver !== 'undefined') {
     } else if (!hdr) {
       var orphanBtn = document.getElementById('wy-fold-btn');
       if (orphanBtn) orphanBtn.remove();
+      stopLeftColResizeSync(null);
     } else if (hdr && !document.getElementById('wy-fold-btn')) {
       initFoldToggle();
     }
