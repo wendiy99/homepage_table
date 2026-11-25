@@ -560,32 +560,45 @@ function injectStyles() {
     '}'
   ].join('\n');
   style.textContent += '\n' + [
-    '/* COLLAPSIBLE RIGHT COLUMN & TOP-CENTER TOGGLE */',
-    '#wy-fold-btn {',
-    '  position: fixed !important;',
-    '  top: 14px !important;',
-    '  left: 50% !important;',
-    '  transform: translateX(-50%) !important;',
+    '/* COLLAPSIBLE RIGHT COLUMN & LEFT-COLUMN TOP-RIGHT TOGGLE */',
+    '#wy-fold-anchor {',
+    '  position: sticky !important;',
+    '  top: 0 !important;',
     '  z-index: 500 !important;',
+    '  height: 0 !important;',
+    '  width: 100% !important;',
+    '  overflow: visible !important;',
+    '  display: flex !important;',
+    '  justify-content: flex-end !important;',
+    '  align-items: flex-start !important;',
+    '  padding: 10px 10px 0 0 !important;',
+    '  margin: 0 !important;',
+    '  box-sizing: border-box !important;',
+    '  pointer-events: none !important;',
+    '}',
+    '#wy-fold-btn {',
+    '  position: relative !important;',
     '  display: inline-flex !important;',
     '  align-items: center !important;',
+    '  justify-content: center !important;',
     '  gap: 6px !important;',
-    '  padding: 5px 12px !important;',
+    '  padding: 6px 11px !important;',
     '  margin: 0 !important;',
-    '  border-radius: 2rem !important;',
-    '  border: 1px solid rgba(17, 17, 17, 0.18) !important;',
-    '  background: rgba(255, 255, 255, 0.9) !important;',
+    '  border-radius: 999px !important;',
+    '  border: 1px solid rgba(17, 17, 17, 0.14) !important;',
+    '  background: rgba(255, 255, 255, 0.88) !important;',
     '  backdrop-filter: blur(8px) !important;',
     '  -webkit-backdrop-filter: blur(8px) !important;',
-    '  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06) !important;',
+    '  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;',
     '  color: #111 !important;',
     '  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;',
     '  font-size: 10px !important;',
     '  font-weight: 500 !important;',
-    '  letter-spacing: 0.1em !important;',
+    '  letter-spacing: 0.08em !important;',
     '  text-transform: uppercase !important;',
     '  line-height: 1 !important;',
     '  cursor: pointer !important;',
+    '  pointer-events: auto !important;',
     '  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease !important;',
     '  white-space: nowrap !important;',
     '  user-select: none !important;',
@@ -633,7 +646,7 @@ function injectStyles() {
     '  column-set.wy-fold-animating > column-unit[slot="1"] {',
     '    flex: 0 0 var(--wy-right-col-width) !important;',
     '    width: var(--wy-right-col-width) !important;',
-    '    min-width: 36px !important;',
+    '    min-width: 32px !important;',
     '    max-width: var(--wy-right-col-width) !important;',
     '  }',
     '  column-set.wy-fold-ready > column-unit[slot="1"] > #wy-header,',
@@ -641,12 +654,14 @@ function injectStyles() {
     '    transition: opacity 0.22s ease !important;',
     '  }',
     '  column-set.wy-right-collapsed > column-unit[slot="1"] {',
-    '    flex: 0 0 36px !important;',
-    '    width: 36px !important;',
-    '    min-width: 36px !important;',
-    '    max-width: 36px !important;',
+    '    flex: 0 0 32px !important;',
+    '    width: 32px !important;',
+    '    min-width: 32px !important;',
+    '    max-width: 32px !important;',
+    '    height: calc(100vh - 26px) !important;',
+    '    max-height: calc(100vh - 26px) !important;',
     '    padding: 0 !important;',
-    '    border-left: 1px solid #e6e6e6 !important;',
+    '    border-left: 1px solid #eaeaea !important;',
     '    background: #fafafa !important;',
     '    cursor: pointer !important;',
     '    overflow: hidden !important;',
@@ -701,6 +716,7 @@ function injectStyles() {
     '  }',
     '}',
     '@media screen and (max-width: 768px) {',
+    '  #wy-fold-anchor,',
     '  #wy-fold-btn {',
     '    display: none !important;',
     '  }',
@@ -1116,10 +1132,12 @@ function initFoldToggle() {
   var rightCol = hdr ? hdr.closest('column-unit') : null;
   var colSet = rightCol ? rightCol.closest('column-set') : null;
   var leftCol = colSet ? colSet.querySelector('column-unit[slot="0"]') : null;
+  var existingAnchor = document.getElementById('wy-fold-anchor');
   var existingBtn = document.getElementById('wy-fold-btn');
 
   if (!colSet || !leftCol || !rightCol || leftCol === rightCol) {
-    if (existingBtn) existingBtn.remove();
+    if (existingAnchor) existingAnchor.remove();
+    else if (existingBtn) existingBtn.remove();
     return;
   }
 
@@ -1149,7 +1167,13 @@ function initFoldToggle() {
     rightCol.appendChild(strip);
   }
 
-  if (!existingBtn) {
+  if (!existingAnchor || !leftCol.contains(existingAnchor)) {
+    if (existingAnchor) existingAnchor.remove();
+    if (existingBtn && !existingAnchor) existingBtn.remove();
+
+    var anchor = document.createElement('div');
+    anchor.id = 'wy-fold-anchor';
+
     var btn = document.createElement('button');
     btn.id = 'wy-fold-btn';
     btn.type = 'button';
@@ -1157,7 +1181,8 @@ function initFoldToggle() {
     btn.addEventListener('click', function() {
       setRightColumnCollapsed(!wyFoldState.collapsed);
     });
-    document.body.appendChild(btn);
+    anchor.appendChild(btn);
+    leftCol.insertBefore(anchor, leftCol.firstChild);
   } else {
     syncFoldButtonUI(existingBtn, wyFoldState.collapsed);
   }
@@ -1178,6 +1203,8 @@ if (typeof MutationObserver !== 'undefined') {
       initTable();
       initFoldToggle();
     } else if (!hdr) {
+      var orphanAnchor = document.getElementById('wy-fold-anchor');
+      if (orphanAnchor) orphanAnchor.remove();
       var orphanBtn = document.getElementById('wy-fold-btn');
       if (orphanBtn) orphanBtn.remove();
       stopLeftColResizeSync(null);
