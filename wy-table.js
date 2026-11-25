@@ -559,6 +559,153 @@ function injectStyles() {
     '  }',
     '}'
   ].join('\n');
+  style.textContent += '\n' + [
+    '/* COLLAPSIBLE RIGHT COLUMN & TOP-CENTER TOGGLE */',
+    '#wy-fold-btn {',
+    '  position: fixed !important;',
+    '  top: 14px !important;',
+    '  left: 50% !important;',
+    '  transform: translateX(-50%) !important;',
+    '  z-index: 500 !important;',
+    '  display: inline-flex !important;',
+    '  align-items: center !important;',
+    '  gap: 6px !important;',
+    '  padding: 5px 12px !important;',
+    '  margin: 0 !important;',
+    '  border-radius: 2rem !important;',
+    '  border: 1px solid rgba(17, 17, 17, 0.18) !important;',
+    '  background: rgba(255, 255, 255, 0.9) !important;',
+    '  backdrop-filter: blur(8px) !important;',
+    '  -webkit-backdrop-filter: blur(8px) !important;',
+    '  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06) !important;',
+    '  color: #111 !important;',
+    '  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;',
+    '  font-size: 10px !important;',
+    '  font-weight: 500 !important;',
+    '  letter-spacing: 0.1em !important;',
+    '  text-transform: uppercase !important;',
+    '  line-height: 1 !important;',
+    '  cursor: pointer !important;',
+    '  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease !important;',
+    '  white-space: nowrap !important;',
+    '  user-select: none !important;',
+    '}',
+    '#wy-fold-btn:hover {',
+    '  background: #111 !important;',
+    '  border-color: #111 !important;',
+    '  color: #f5f5f5 !important;',
+    '  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14) !important;',
+    '}',
+    '#wy-fold-btn svg {',
+    '  width: 12px !important;',
+    '  height: 12px !important;',
+    '  display: block !important;',
+    '  flex-shrink: 0 !important;',
+    '  stroke: currentColor !important;',
+    '  fill: none !important;',
+    '  stroke-width: 1.6 !important;',
+    '  stroke-linecap: round !important;',
+    '  stroke-linejoin: round !important;',
+    '}',
+    '.wy-collapsed-strip {',
+    '  display: none !important;',
+    '}',
+    '@media screen and (min-width: 769px) {',
+    '  column-set.wy-fold-ready {',
+    '    display: flex !important;',
+    '    flex-direction: row !important;',
+    '    flex-wrap: nowrap !important;',
+    '    align-items: stretch !important;',
+    '    width: 100% !important;',
+    '  }',
+    '  column-set.wy-fold-animating > column-unit[slot="0"],',
+    '  column-set.wy-right-collapsed > column-unit[slot="0"] {',
+    '    flex: 1 1 0% !important;',
+    '    width: auto !important;',
+    '    min-width: 0 !important;',
+    '    max-width: none !important;',
+    '  }',
+    '  column-set.wy-fold-ready > column-unit[slot="1"] {',
+    '    position: sticky !important;',
+    '    top: 0 !important;',
+    '    transition: flex-basis 0.42s cubic-bezier(0.22, 1, 0.36, 1), width 0.42s cubic-bezier(0.22, 1, 0.36, 1), min-width 0.42s cubic-bezier(0.22, 1, 0.36, 1), max-width 0.42s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.2s ease, border-color 0.2s ease !important;',
+    '  }',
+    '  column-set.wy-fold-animating > column-unit[slot="1"] {',
+    '    flex: 0 0 var(--wy-right-col-width) !important;',
+    '    width: var(--wy-right-col-width) !important;',
+    '    min-width: 36px !important;',
+    '    max-width: var(--wy-right-col-width) !important;',
+    '  }',
+    '  column-set.wy-fold-ready > column-unit[slot="1"] > #wy-header,',
+    '  column-set.wy-fold-ready > column-unit[slot="1"] > #wy-scroll {',
+    '    transition: opacity 0.22s ease !important;',
+    '  }',
+    '  column-set.wy-right-collapsed > column-unit[slot="1"] {',
+    '    flex: 0 0 36px !important;',
+    '    width: 36px !important;',
+    '    min-width: 36px !important;',
+    '    max-width: 36px !important;',
+    '    padding: 0 !important;',
+    '    border-left: 1px solid #e6e6e6 !important;',
+    '    background: #fafafa !important;',
+    '    cursor: pointer !important;',
+    '    overflow: hidden !important;',
+    '  }',
+    '  column-set.wy-right-collapsed > column-unit[slot="1"]:hover {',
+    '    background: #111 !important;',
+    '    border-left-color: #111 !important;',
+    '  }',
+    '  column-set.wy-right-collapsed > column-unit[slot="1"] > #wy-header,',
+    '  column-set.wy-right-collapsed > column-unit[slot="1"] > #wy-scroll {',
+    '    opacity: 0 !important;',
+    '    pointer-events: none !important;',
+    '    visibility: hidden !important;',
+    '  }',
+    '  column-set.wy-fold-ready > column-unit[slot="1"] > .wy-collapsed-strip {',
+    '    display: flex !important;',
+    '    position: absolute !important;',
+    '    inset: 0 !important;',
+    '    flex-direction: column !important;',
+    '    align-items: center !important;',
+    '    justify-content: center !important;',
+    '    gap: 10px !important;',
+    '    opacity: 0 !important;',
+    '    pointer-events: none !important;',
+    '    transition: opacity 0.25s ease 0.1s, color 0.18s ease !important;',
+    '    color: #888 !important;',
+    '    user-select: none !important;',
+    '    z-index: 10 !important;',
+    '  }',
+    '  column-set.wy-right-collapsed > column-unit[slot="1"] > .wy-collapsed-strip {',
+    '    opacity: 1 !important;',
+    '    pointer-events: auto !important;',
+    '  }',
+    '  column-set.wy-right-collapsed > column-unit[slot="1"]:hover > .wy-collapsed-strip {',
+    '    color: #f5f5f5 !important;',
+    '  }',
+    '  .wy-collapsed-strip-label {',
+    '    writing-mode: vertical-rl !important;',
+    '    text-orientation: mixed !important;',
+    '    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;',
+    '    font-size: 10px !important;',
+    '    font-weight: 500 !important;',
+    '    letter-spacing: 0.16em !important;',
+    '    text-transform: uppercase !important;',
+    '    line-height: 1 !important;',
+    '    color: inherit !important;',
+    '  }',
+    '  .wy-collapsed-strip-arrow {',
+    '    font-size: 13px !important;',
+    '    line-height: 1 !important;',
+    '    color: inherit !important;',
+    '  }',
+    '}',
+    '@media screen and (max-width: 768px) {',
+    '  #wy-fold-btn {',
+    '    display: none !important;',
+    '  }',
+    '}'
+  ].join('\n');
   (document.head || document.documentElement).appendChild(style);
 }
 
@@ -842,13 +989,160 @@ function initTable() {
   };
 }
 
+var wyFoldState = {
+  collapsed: false,
+  savedRatio: null,
+  animTimer: null
+};
+
+function syncFoldButtonUI(btn, collapsed) {
+  if (!btn) return;
+  btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+  btn.setAttribute('title', collapsed ? 'Expand right column' : 'Collapse right column');
+  if (collapsed) {
+    btn.innerHTML =
+      '<svg viewBox="0 0 16 16" aria-hidden="true">' +
+      '<rect x="1.5" y="2.5" width="13" height="11" rx="1.5"></rect>' +
+      '<line x1="10.5" y1="2.5" x2="10.5" y2="13.5"></line>' +
+      '<polyline points="7.5 5.5 5 8 7.5 10.5"></polyline>' +
+      '</svg>' +
+      '<span>Show Bio</span>';
+  } else {
+    btn.innerHTML =
+      '<svg viewBox="0 0 16 16" aria-hidden="true">' +
+      '<rect x="1.5" y="2.5" width="13" height="11" rx="1.5"></rect>' +
+      '<line x1="10.5" y1="2.5" x2="10.5" y2="13.5"></line>' +
+      '<polyline points="5.5 5.5 8 8 5.5 10.5"></polyline>' +
+      '</svg>' +
+      '<span>Expand</span>';
+  }
+}
+
+function setRightColumnCollapsed(collapse) {
+  var hdr = document.getElementById('wy-header');
+  var rightCol = hdr ? hdr.closest('column-unit') : null;
+  var colSet = rightCol ? rightCol.closest('column-set') : null;
+  var leftCol = colSet ? colSet.querySelector('column-unit[slot="0"]') : null;
+  if (!colSet || !leftCol || !rightCol || leftCol === rightCol) return;
+
+  if (wyFoldState.animTimer) {
+    clearTimeout(wyFoldState.animTimer);
+    wyFoldState.animTimer = null;
+  }
+
+  var btn = document.getElementById('wy-fold-btn');
+  var colSetWidth = colSet.getBoundingClientRect().width;
+
+  if (collapse) {
+    var currentRightWidth = rightCol.getBoundingClientRect().width;
+    if (colSetWidth > 0 && currentRightWidth > 40) {
+      wyFoldState.savedRatio = currentRightWidth / colSetWidth;
+    }
+    var startWidth = currentRightWidth > 40 ? currentRightWidth : (colSetWidth * (wyFoldState.savedRatio || 0.41));
+    colSet.style.setProperty('--wy-right-col-width', Math.round(startWidth) + 'px');
+    colSet.classList.add('wy-fold-animating');
+    void colSet.offsetWidth;
+    colSet.classList.add('wy-right-collapsed');
+    wyFoldState.collapsed = true;
+
+    var previewEl = document.getElementById('wy-hover-preview');
+    if (previewEl) {
+      previewEl.classList.remove('active');
+      previewEl.style.display = 'none';
+    }
+
+    wyFoldState.animTimer = setTimeout(function() {
+      colSet.classList.remove('wy-fold-animating');
+      window.dispatchEvent(new Event('resize'));
+    }, 450);
+  } else {
+    var targetWidth = colSetWidth > 0 ? colSetWidth * (wyFoldState.savedRatio || 0.41) : 500;
+    colSet.style.setProperty('--wy-right-col-width', Math.round(targetWidth) + 'px');
+    colSet.classList.add('wy-fold-animating');
+    void colSet.offsetWidth;
+    colSet.classList.remove('wy-right-collapsed');
+    wyFoldState.collapsed = false;
+
+    wyFoldState.animTimer = setTimeout(function() {
+      colSet.classList.remove('wy-fold-animating');
+      colSet.style.removeProperty('--wy-right-col-width');
+      window.dispatchEvent(new Event('resize'));
+    }, 450);
+  }
+
+  syncFoldButtonUI(btn, wyFoldState.collapsed);
+}
+
+function initFoldToggle() {
+  var hdr = document.getElementById('wy-header');
+  var rightCol = hdr ? hdr.closest('column-unit') : null;
+  var colSet = rightCol ? rightCol.closest('column-set') : null;
+  var leftCol = colSet ? colSet.querySelector('column-unit[slot="0"]') : null;
+  var existingBtn = document.getElementById('wy-fold-btn');
+
+  if (!colSet || !leftCol || !rightCol || leftCol === rightCol) {
+    if (existingBtn) existingBtn.remove();
+    return;
+  }
+
+  colSet.classList.add('wy-fold-ready');
+
+  if (!rightCol.querySelector('.wy-collapsed-strip')) {
+    var strip = document.createElement('div');
+    strip.className = 'wy-collapsed-strip';
+    strip.setAttribute('role', 'button');
+    strip.setAttribute('tabindex', '0');
+    strip.setAttribute('aria-label', 'Expand bio and activity column');
+    strip.innerHTML =
+      '<span class="wy-collapsed-strip-arrow" aria-hidden="true">&#8249;</span>' +
+      '<span class="wy-collapsed-strip-label">Bio &amp; Index</span>';
+    strip.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (wyFoldState.collapsed) {
+        setRightColumnCollapsed(false);
+      }
+    });
+    strip.addEventListener('keydown', function(e) {
+      if ((e.key === 'Enter' || e.key === ' ') && wyFoldState.collapsed) {
+        e.preventDefault();
+        setRightColumnCollapsed(false);
+      }
+    });
+    rightCol.appendChild(strip);
+  }
+
+  if (!existingBtn) {
+    var btn = document.createElement('button');
+    btn.id = 'wy-fold-btn';
+    btn.type = 'button';
+    syncFoldButtonUI(btn, wyFoldState.collapsed);
+    btn.addEventListener('click', function() {
+      setRightColumnCollapsed(!wyFoldState.collapsed);
+    });
+    document.body.appendChild(btn);
+  } else {
+    syncFoldButtonUI(existingBtn, wyFoldState.collapsed);
+  }
+
+  if (wyFoldState.collapsed) {
+    colSet.classList.add('wy-right-collapsed');
+  }
+}
+
 initTable();
+initFoldToggle();
 if (typeof MutationObserver !== 'undefined') {
   var wyObserver = new MutationObserver(function() {
     var tbl = document.querySelector('.wy-table');
     var hdr = document.getElementById('wy-header');
     if ((tbl && !tbl.querySelector('tbody')) || (hdr && !tbl)) {
       initTable();
+      initFoldToggle();
+    } else if (!hdr) {
+      var orphanBtn = document.getElementById('wy-fold-btn');
+      if (orphanBtn) orphanBtn.remove();
+    } else if (hdr && !document.getElementById('wy-fold-btn')) {
+      initFoldToggle();
     }
   });
   wyObserver.observe(document.documentElement, { childList: true, subtree: true });
