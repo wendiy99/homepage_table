@@ -581,42 +581,35 @@ function injectStyles() {
     '  display: inline-flex !important;',
     '  align-items: center !important;',
     '  justify-content: center !important;',
-    '  gap: 6px !important;',
-    '  padding: 6px 11px !important;',
+    '  width: 28px !important;',
+    '  height: 28px !important;',
+    '  padding: 0 !important;',
     '  margin: 0 !important;',
-    '  border-radius: 999px !important;',
-    '  border: 1px solid rgba(17, 17, 17, 0.14) !important;',
-    '  background: rgba(255, 255, 255, 0.88) !important;',
-    '  backdrop-filter: blur(8px) !important;',
-    '  -webkit-backdrop-filter: blur(8px) !important;',
-    '  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;',
+    '  border-radius: 0px !important;',
+    '  border: 1px solid rgba(17, 17, 17, 0.18) !important;',
+    '  background: rgba(255, 255, 255, 0.92) !important;',
+    '  box-shadow: none !important;',
     '  color: #111 !important;',
-    '  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;',
-    '  font-size: 10px !important;',
-    '  font-weight: 500 !important;',
-    '  letter-spacing: 0.08em !important;',
-    '  text-transform: uppercase !important;',
     '  line-height: 1 !important;',
     '  cursor: pointer !important;',
     '  pointer-events: auto !important;',
-    '  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease !important;',
-    '  white-space: nowrap !important;',
+    '  transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease !important;',
     '  user-select: none !important;',
     '}',
     '#wy-fold-btn:hover {',
     '  background: #111 !important;',
     '  border-color: #111 !important;',
     '  color: #f5f5f5 !important;',
-    '  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14) !important;',
+    '  box-shadow: none !important;',
     '}',
     '#wy-fold-btn svg {',
-    '  width: 12px !important;',
-    '  height: 12px !important;',
+    '  width: 14px !important;',
+    '  height: 14px !important;',
     '  display: block !important;',
     '  flex-shrink: 0 !important;',
     '  stroke: currentColor !important;',
     '  fill: none !important;',
-    '  stroke-width: 1.6 !important;',
+    '  stroke-width: 1.5 !important;',
     '  stroke-linecap: round !important;',
     '  stroke-linejoin: round !important;',
     '}',
@@ -1049,23 +1042,24 @@ function stopLeftColResizeSync(leftCol) {
 function syncFoldButtonUI(btn, collapsed) {
   if (!btn) return;
   btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
-  btn.setAttribute('title', collapsed ? 'Expand right column' : 'Collapse right column');
+  btn.setAttribute('aria-label', collapsed ? 'Restore split view' : 'Expand works view');
+  btn.setAttribute('title', collapsed ? 'Restore split view' : 'Expand works view');
   if (collapsed) {
     btn.innerHTML =
       '<svg viewBox="0 0 16 16" aria-hidden="true">' +
-      '<rect x="1.5" y="2.5" width="13" height="11" rx="1.5"></rect>' +
-      '<line x1="10.5" y1="2.5" x2="10.5" y2="13.5"></line>' +
-      '<polyline points="7.5 5.5 5 8 7.5 10.5"></polyline>' +
-      '</svg>' +
-      '<span>Show Bio</span>';
+      '<polyline points="13 6.5 9.5 6.5 9.5 3"></polyline>' +
+      '<line x1="13" y1="3" x2="9.5" y2="6.5"></line>' +
+      '<polyline points="3 9.5 6.5 9.5 6.5 13"></polyline>' +
+      '<line x1="3" y1="13" x2="6.5" y2="9.5"></line>' +
+      '</svg>';
   } else {
     btn.innerHTML =
       '<svg viewBox="0 0 16 16" aria-hidden="true">' +
-      '<rect x="1.5" y="2.5" width="13" height="11" rx="1.5"></rect>' +
-      '<line x1="10.5" y1="2.5" x2="10.5" y2="13.5"></line>' +
-      '<polyline points="5.5 5.5 8 8 5.5 10.5"></polyline>' +
-      '</svg>' +
-      '<span>Expand</span>';
+      '<polyline points="9.5 3 13 3 13 6.5"></polyline>' +
+      '<line x1="13" y1="3" x2="9" y2="7"></line>' +
+      '<polyline points="6.5 13 3 13 3 9.5"></polyline>' +
+      '<line x1="3" y1="13" x2="7" y2="9"></line>' +
+      '</svg>';
   }
 }
 
